@@ -15,7 +15,7 @@ const FavoritePost = () => {
   const { favoriteposts, isLoading, isError, message } = useSelector((state) => state.favoriteposts)
   const { posts } = useSelector((state) => state.posts)
 
-  // Get my favorite games data
+  // Get my favorite products data
   useEffect(() => {
     if (isError) {
       toast.error(message);
@@ -57,7 +57,7 @@ const FavoritePost = () => {
 
       <Row>
         <Col>
-          <h3 className='title'>My favorite Games</h3>
+          <h3 className='title'>My Favorite Products</h3>
 
           {favoriteposts.length > 0 ? (
             <>
@@ -70,7 +70,7 @@ const FavoritePost = () => {
                     size="sm"
                     onClick={() => delMyFavoritePost(post._id)}
                   >
-                    Remove from My Favorite Games
+                    Remove from My Favorite Products
                   </Button>
                 </div>
               )}
@@ -81,7 +81,7 @@ const FavoritePost = () => {
         </Col>
         {/* Image Slide Show area */}
         <Col className={toggleSlideShow? "show":"hide"}>
-          <h3 className='title'>Game Reviews Slide Show</h3>
+          <h3 className='title'>Product Reviews Slide Show</h3>
           {posts.length > 0 ? (<ImageSlideShow posts={posts} />):('')}
         </Col>
       </Row>

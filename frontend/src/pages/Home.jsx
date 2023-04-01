@@ -135,7 +135,7 @@ const Home = () => {
         </Col>
         {/* Image Slide Show area */}
         <Col className={toggleSlideShow? "show":"hide"}>
-          <h3 className='title mb-2'>Game Reviews Slide Show</h3>
+          <h3 className='title mb-2'>Product Reviews Slide Show</h3>
           {posts.length > 0 ? (<ImageSlideShow posts={posts} />):('')}
         </Col>
       </Row>

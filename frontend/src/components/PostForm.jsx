@@ -161,7 +161,7 @@ function PostForm({ postId, togglePostForm, returnAddForm }) {
               id='city'
               name='city'
               value={city}
-              placeholder="Genre"
+              placeholder="Category"
               onChange={onChange}
             />
           </Form.Group>
@@ -171,7 +171,7 @@ function PostForm({ postId, togglePostForm, returnAddForm }) {
               id='country'
               name='country'
               value={country}
-              placeholder="Release Date"
+              placeholder="Date"
               onChange={onChange}
             />
           </Form.Group>

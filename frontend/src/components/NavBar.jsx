@@ -31,7 +31,7 @@ const NavBar = () => {
 		<nav className="navbar">
 			<NavLink to="/" className="nav-logo">
         <img className='nav-img' src={logo} alt='logo' />
-        Limbonaut Reviews
+        Pop Zombie
       </NavLink>
 			<div onClick={()=>setOpen(!open)} className="nav-icon">
 				{open ? <FiX /> : <FiMenu />}
@@ -63,7 +63,7 @@ const NavBar = () => {
               className={({ isActive }) => (isActive ? 'active nav-link' : 'inactive nav-link')}
               onClick={()=>setOpen(false)}
             >
-              My Favorite Games
+              My Favorite Products
             </NavLink>
           </li>
           <li className="nav-item">
