@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import './NavBar.css';
 import { useNavigate } from "react-router";
-import logo from "../logo/Dice.png";
+import logo from "../logo/pop-zombie-v-2.png";
 
 import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux';
