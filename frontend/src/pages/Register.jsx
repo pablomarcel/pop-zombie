@@ -79,96 +79,106 @@ function Register() {
   }
 
   return (
-    <Container style={{ width: "400px" }}>
-      <section className='heading'>
-        <h3>
-          <FaUser /> Register
-        </h3>
-        <h4>Please create an account</h4>
-      </section>
+      <Container style={{ width: "400px" }}>
+        <section className='heading' style={{ backgroundColor: "#e6c8fe" }}>
+          <h3 style={{ color: "#fbb9c5" }}>
+            <FaUser /> Register
+          </h3>
+          <h4 style={{ color: "#b8dfe6" }}>Please create an account</h4>
+        </section>
 
-      <section className='form'>
-        <form onSubmit={onSubmit}>
-          <div className='form-group'>
-            <input
-              type='text'
-              className='form-control'
-              id='firstName'
-              name='firstName'
-              value={firstName}
-              placeholder='First name'
-              onChange={onChange}
-              required
-            />
-            <input
-              type='text'
-              className='form-control'
-              id='lastName'
-              name='lastName'
-              value={lastName}
-              placeholder='Last name'
-              onChange={onChange}
-              required
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              type='email'
-              className='form-control'
-              id='email'
-              name='email'
-              value={email}
-              placeholder='Enter your email'
-              onChange={onChange}
-              required
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              type='password'
-              className='form-control'
-              id='password'
-              name='password'
-              value={password}
-              placeholder='Enter password'
-              onChange={onChange}
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              type='password'
-              className='form-control'
-              id='password2'
-              name='password2'
-              value={password2}
-              placeholder='Confirm password'
-              onChange={onChange}
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              type='file'
-              className='form-control'
-              id='image'
-              name='image'
-              accept='image/*'
-              onChange={(e) => setImage(e.target.files[0])}
-            />
-            {imagePath?
-              <img src={imagePath} alt = '' className='author-image' />
-              : null
-            }
-          </div>
- 
-          <div className='form-group'>
-            <button type='submit' className='btn btn-block'>
-              Submit
-            </button>
-          </div>
-        </form>
-      </section>
-    </Container>
-  )
+        <section className='form' style={{ backgroundColor: "#fcf7e3" }}>
+          <form onSubmit={onSubmit}>
+            <div className='form-group'>
+              <input
+                  type='text'
+                  className='form-control'
+                  id='firstName'
+                  name='firstName'
+                  value={firstName}
+                  placeholder='First name'
+                  onChange={onChange}
+                  required
+                  style={{ backgroundColor: "#c3edbf" }}
+              />
+              <input
+                  type='text'
+                  className='form-control'
+                  id='lastName'
+                  name='lastName'
+                  value={lastName}
+                  placeholder='Last name'
+                  onChange={onChange}
+                  required
+                  style={{ backgroundColor: "#c3edbf" }}
+              />
+            </div>
+            <div className='form-group'>
+              <input
+                  type='email'
+                  className='form-control'
+                  id='email'
+                  name='email'
+                  value={email}
+                  placeholder='Enter your email'
+                  onChange={onChange}
+                  required
+                  style={{ backgroundColor: "#c3edbf" }}
+              />
+            </div>
+            <div className='form-group'>
+              <input
+                  type='password'
+                  className='form-control'
+                  id='password'
+                  name='password'
+                  value={password}
+                  placeholder='Enter password'
+                  onChange={onChange}
+                  style={{ backgroundColor: "#c3edbf" }}
+              />
+            </div>
+            <div className='form-group'>
+              <input
+                  type='password'
+                  className='form-control'
+                  id='password2'
+                  name='password2'
+                  value={password2}
+                  placeholder='Confirm password'
+                  onChange={onChange}
+                  style={{ backgroundColor: "#c3edbf" }}
+              />
+            </div>
+            <div className='form-group'>
+              <input
+                  type='file'
+                  className='form-control'
+                  id='image'
+                  name='image'
+                  accept='image/*'
+                  onChange={(e) => setImage(e.target.files[0])}
+                  style={{ backgroundColor: "#c3edbf" }}
+              />
+              {imagePath ? (
+                  <img src={imagePath} alt='' className='author-image' />
+              ) : null}
+            </div>
+
+            <div className='form-group'>
+              <button
+                  type='submit'
+                  className='btn btn-block'
+                  style={{ backgroundColor: "#fbb9c5", color: "#fcf7e3" }}
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </section>
+      </Container>
+  );
+
 }
 
 export default Register

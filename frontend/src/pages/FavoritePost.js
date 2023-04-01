@@ -43,50 +43,53 @@ const FavoritePost = () => {
   };
 
   return (
-    <Container fluid>
-      {/* Rendering button showing/hiding slide show */}
-      <div className="right__side mt-2">
-        <Button
-          variant="outline-primary"
-          size="sm"
-          onClick={()=> setToggleSlideShow(!toggleSlideShow)}
-        >
-          {toggleSlideShow? "Hide Slide Show" : "Show Slide Show"}
-        </Button>
-      </div>
+      <Container fluid>
+        {/* Rendering button showing/hiding slide show */}
+        <div className="right__side mt-2">
+          <Button
+              variant="outline-primary"
+              size="sm"
+              onClick={()=> setToggleSlideShow(!toggleSlideShow)}
+              style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf' }}
+          >
+            {toggleSlideShow? "Hide Slide Show" : "Show Slide Show"}
+          </Button>
+        </div>
 
-      <Row>
-        <Col>
-          <h3 className='title'>My Favorite Products</h3>
+        <Row>
+          <Col>
+            <h3 className='title' style={{ color: '#fbb9c5' }}>My Favorite Products</h3>
 
-          {favoriteposts.length > 0 ? (
-            <>
-              {favoriteposts.map((post) =>
-                <div key={post._id} className='pb-2 mb-2 bottom__line'>
-                  <Post post={post} showUsername={true} fromFavoritePostPage={true} />
-                  {/* Remove button */}
-                  <Button
-                    variant="outline-danger"
-                    size="sm"
-                    onClick={() => delMyFavoritePost(post._id)}
-                  >
-                    Remove from My Favorite Products
-                  </Button>
-                </div>
-              )}
-            </>
+            {favoriteposts.length > 0 ? (
+                <>
+                  {favoriteposts.map((post) =>
+                      <div key={post._id} className='pb-2 mb-2 bottom__line'>
+                        <Post post={post} showUsername={true} fromFavoritePostPage={true} />
+                        {/* Remove button */}
+                        <Button
+                            variant="outline-danger"
+                            size="sm"
+                            onClick={() => delMyFavoritePost(post._id)}
+                            style={{ backgroundColor: '#e6c8fe', borderColor: '#e6c8fe' }}
+                        >
+                          Remove from My Favorite Products
+                        </Button>
+                      </div>
+                  )}
+                </>
             ) : ('There is no favorite post here.')
-          }
+            }
 
-        </Col>
-        {/* Image Slide Show area */}
-        <Col className={toggleSlideShow? "show":"hide"}>
-          <h3 className='title'>Product Reviews Slide Show</h3>
-          {posts.length > 0 ? (<ImageSlideShow posts={posts} />):('')}
-        </Col>
-      </Row>
-    </Container>
+          </Col>
+          {/* Image Slide Show area */}
+          <Col className={toggleSlideShow? "show":"hide"}>
+            <h3 className='title' style={{ color: '#b8dfe6' }}>Product Reviews Slide Show</h3>
+            {posts.length > 0 ? (<ImageSlideShow posts={posts} />):('')}
+          </Col>
+        </Row>
+      </Container>
   )
+
 }
 
 export default FavoritePost

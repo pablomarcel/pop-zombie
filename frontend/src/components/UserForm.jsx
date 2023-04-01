@@ -67,7 +67,7 @@ function UserForm() {
         toast.error('Passwords do not match')
         return
       }
-    } 
+    }
     const userData = {
       firstName,
       lastName,
@@ -101,114 +101,122 @@ function UserForm() {
   }
 
   return (
-    <Container style={{ width: "400px" }}>
-      <section className='heading'>
-        <h3>
-          <FaUser /> Update Profile
-        </h3>
-      </section>
+      <Container style={{ width: "400px" }}>
+        <section className='heading' style={{ backgroundColor: "#fbb9c5" }}>
+          <h3>
+            <FaUser style={{ color: "#e6c8fe" }} /> Update Profile
+          </h3>
+        </section>
 
-      <section className='form'>
-        <form onSubmit={onSubmit}>
-          <div className='form-group'>
-            <input
-              type='file'
-              className='form-control'
-              id='image'
-              name='image'
-              accept='image/*'
-              onChange={(e) => setImage(e.target.files[0])}
-            />
-            {image?
-              <img src={imagePath} alt = 'author' className='author-image' />
-              : null}
-          </div>
-          <div className='form-group'>
-            <input
-              type='text'
-              className='form-control'
-              id='firstName'
-              name='firstName'
-              value={firstName}
-              placeholder='First name'
-              onChange={onChange}
-            />
-            <input
-              type='text'
-              className='form-control'
-              id='lastName'
-              name='lastName'
-              value={lastName}
-              placeholder='Last name'
-              onChange={onChange}
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              type='email'
-              className='form-control'
-              id='email'
-              name='email'
-              value={email}
-              placeholder='Enter your email'
-              onChange={onChange}
-              required
-            />
-          </div>
-          <div className='form-group'>
-            <Button
-              variant="outline-primary"
-              size="sm"
-              onClick={() => setToggleChangePassword(!toggleChangePassword)}
-            >
-              {toggleChangePassword? 'Disable Change Password': 'Change Password'}
-            </Button>
-          </div>
-          {toggleChangePassword? (
-            <>
-              <div className='form-group'>
-                <input
-                  type='password'
+        <section className='form' style={{ backgroundColor: "#fcf7e3" }}>
+          <form onSubmit={onSubmit}>
+            <div className='form-group'>
+              <input
+                  type='file'
                   className='form-control'
-                  id='oldPassword'
-                  name='oldPassword'
-                  value={oldPassword}
-                  placeholder='Enter old password'
-                  onChange={onChange}
-                />
-              </div>
-              <div className='form-group'>
-                <input
-                  type='password'
+                  id='image'
+                  name='image'
+                  accept='image/*'
+                  onChange={(e) => setImage(e.target.files[0])}
+              />
+              {image?
+                  <img src={imagePath} alt = 'author' className='author-image' />
+                  : null}
+            </div>
+            <div className='form-group'>
+              <input
+                  type='text'
                   className='form-control'
-                  id='password'
-                  name='password'
-                  value={password}
-                  placeholder='Enter new password'
+                  id='firstName'
+                  name='firstName'
+                  value={firstName}
+                  placeholder='First name'
                   onChange={onChange}
-                />
-              </div>
-              <div className='form-group'>
-                <input
-                  type='password'
+                  style={{ backgroundColor: "#b8dfe6" }}
+              />
+              <input
+                  type='text'
                   className='form-control'
-                  id='password2'
-                  name='password2'
-                  value={password2}
-                  placeholder='Confirm new password'
+                  id='lastName'
+                  name='lastName'
+                  value={lastName}
+                  placeholder='Last name'
                   onChange={onChange}
-                />
-              </div>
-            </>
-          ) : null}
+                  style={{ backgroundColor: "#b8dfe6" }}
+              />
+            </div>
+            <div className='form-group'>
+              <input
+                  type='email'
+                  className='form-control'
+                  id='email'
+                  name='email'
+                  value={email}
+                  placeholder='Enter your email'
+                  onChange={onChange}
+                  style={{ backgroundColor: "#c3edbf" }}
+                  required
+              />
+            </div>
+            <div className='form-group'>
+              <Button
+                  variant="outline-primary"
+                  size="sm"
+                  onClick={() => setToggleChangePassword(!toggleChangePassword)}
+                  style={{ backgroundColor: "#fbb9c5", borderColor: "#e6c8fe", color: "#e6c8fe" }}
+              >
+                {toggleChangePassword? 'Disable Change Password': 'Change Password'}
+              </Button>
+            </div>
+            {toggleChangePassword? (
+                <>
+                  <div className='form-group'>
+                    <input
+                        type='password'
+                        className='form-control'
+                        id='oldPassword'
+                        name='oldPassword'
+                        value={oldPassword}
+                        placeholder='Enter old password'
+                        onChange={onChange}
+                        style={{ backgroundColor: "#b8dfe6" }}
+                    />
+                  </div>
+                  <div className='form-group'>
+                    <input
+                        type='password'
+                        className='form-control'
+                        id='password'
+                        name='password'
+                        value={password}
+                        placeholder='Enter new password'
+                        onChange={onChange}
+                        style={{ backgroundColor: "#b8dfe6" }}
+                    />
+                  </div>
+                  <div className='form-group'>
+                    <input
+                        type='password'
+                        className='form-control'
+                        id='password2'
+                        name='password2'
+                        value={password2}
+                        placeholder='Confirm new password'
+                        onChange={onChange}
+                        style={{ backgroundColor: "#b8dfe6" }}
+                    />
+                  </div>
+                </>
+            ) : null}
 
-          <div className='form-group'>
-            <button type='submit' className='btn btn-block'>
-              Submit
-            </button>
-          </div>
-        </form>
-      </section>
+            <div className='form-group'>
+              <button type='submit' className='btn btn-block' style={{ backgroundColor: "#fbb9c5" }}>
+                Submit
+              </button>
+            </div>
+          </form>
+        </section>
+
     </Container>
   )
 }

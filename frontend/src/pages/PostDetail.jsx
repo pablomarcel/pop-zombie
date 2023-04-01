@@ -76,62 +76,63 @@ const PostDetail = () => {
   const authorImage = post.author && post.author.image ? post.author.image : default_image;
 
   return (
-    <Container fluid>
-      <div className='title bottom__line'>{post.title}</div>
-      <Row>
-        <Col>
-          <Card className='mb-2'>
-            {post.image ? <Card.Img src = {post.image} alt={post.title} /> : ''}
-            <Card.Body>
-              <Card.Text>
-                <img src={authorImage} alt = '' className='author-small-image' />
-                {post.author ? ` ${post.author.firstName} ${post.author.lastName}`:''}
-                {post.updatedAt? ` - Last modified: ${formatDistance(new Date(post.updatedAt), new Date())}`:''}
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col>
-          <Card.Text>
-            Genre: {post.city} - {post.country}
-          </Card.Text>
-          <Card.Text>
-            {post.content}
-          </Card.Text>
-          {user && !toggleForm ?
-            (<div className="mb-2">
-              <Button variant="outline-primary" type="submit" onClick={()=> toggleCommentForm()}>
-                Add New Comment
-              </Button>
+      <Container fluid>
+        <div className='title bottom__line' style={{ backgroundColor: '#fcf7e3' }}>{post.title}</div>
+        <Row>
+          <Col>
+            <Card className='mb-2' style={{ backgroundColor: '#fcf7e3' }}>
+              {post.image ? <Card.Img src={post.image} alt={post.title} /> : ''}
+              <Card.Body>
+                <Card.Text>
+                  <img src={authorImage} alt='' className='author-small-image' />
+                  {post.author ? ` ${post.author.firstName} ${post.author.lastName}` : ''}
+                  {post.updatedAt ? ` - Last modified: ${formatDistance(new Date(post.updatedAt), new Date())}` : ''}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card.Text style={{ color: '#b8dfe6' }}>
+              Genre: {post.city} - {post.country}
+            </Card.Text>
+            <Card.Text style={{ color: '#fcf7e3' }}>
+              {post.content}
+            </Card.Text>
+            {user && !toggleForm ?
+                (<div className="mb-2">
+                  <Button variant="outline-primary" type="submit" onClick={() => toggleCommentForm()} style={{ backgroundColor: '#e6c8fe', color: '#000' }}>
+                    Add New Comment
+                  </Button>
 
-            </div>)
+                </div>)
+                : ''
+            }
+            <div className={toggleForm ? 'show' : 'hide'}>
+              <Card.Body>
+                <CommentForm postId={id} user={user} toggleCommentForm={toggleCommentForm} refreshCommentData={refreshCommentData} />
+              </Card.Body>
+            </div>
+
+            <Card className='mb-2'>
+              <Card.Body>
+                {comments && comments.length > 0 ? <CommentList comments={comments} refreshCommentData={refreshCommentData} /> : null}
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+
+        <Button variant="outline-primary" type="submit" onClick={() => navigate('/')} style={{ backgroundColor: '#c3edbf', color: '#000' }}>
+          Back to Home Page
+        </Button>{"  "}
+        {user ?
+            <Button variant="outline-primary" type="submit" onClick={addMyFavoritePost} style={{ backgroundColor: '#b8dfe6', color: '#000' }}>
+              Add to My Favorite Products
+            </Button>
             : ''
-          }
-          <div className={toggleForm? 'show' : 'hide'}>
-            <Card.Body>
-              <CommentForm postId={id} user={user} toggleCommentForm={toggleCommentForm} refreshCommentData = {refreshCommentData} />
-            </Card.Body>
-          </div>
+        }
+      </Container>
+  );
 
-          <Card className='mb-2'>
-            <Card.Body>
-              {comments && comments.length > 0 ? <CommentList comments = {comments} refreshCommentData = {refreshCommentData} /> : null}
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-
-      <Button variant="outline-primary" type="submit" onClick={()=> navigate('/')}>
-        Back to Home Page
-      </Button>{"  "}
-      {user ?
-        <Button variant="outline-primary" type="submit" onClick={addMyFavoritePost}>
-          Add to My Favorite Products
-        </Button>
-        : ''
-      }
-    </Container>
-  )
 }
 
 export default PostDetail

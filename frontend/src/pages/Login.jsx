@@ -19,7 +19,7 @@ function Login() {
   const dispatch = useDispatch()
 
   const { user, isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.auth
+      (state) => state.auth
   )
 
   useEffect(() => {
@@ -63,49 +63,51 @@ function Login() {
   }
 
   return (
-    <Container style={{ width: "400px" }}>
-      <section className='heading'>
-        <h3>
-          <FaSignInAlt /> Login
-        </h3>
-        <h4>Login and start posting posts</h4>
-      </section>
+      <Container style={{ width: "400px", backgroundColor: "#fcf7e3", padding: "30px", borderRadius: "10px" }}>
+        <section className='heading'>
+          <h3 style={{ color: "#fbb9c5", marginBottom: "15px" }}>
+            <FaSignInAlt style={{ marginRight: "10px" }} /> Login
+          </h3>
+          <h4 style={{ color: "#b8dfe6" }}>Login and start posting posts</h4>
+        </section>
 
-      <section className='form'>
-        <form onSubmit={onSubmit}>
-          <div className='form-group'>
-            <input
-              type='email'
-              className='form-control'
-              id='email'
-              name='email'
-              value={email}
-              placeholder='Enter your email'
-              onChange={onChange}
-              required
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              type='password'
-              className='form-control'
-              id='password'
-              name='password'
-              value={password}
-              placeholder='Enter password'
-              onChange={onChange}
-              required
-            />
-          </div>
+        <section className='form'>
+          <form onSubmit={onSubmit}>
+            <div className='form-group'>
+              <input
+                  type='email'
+                  className='form-control'
+                  id='email'
+                  name='email'
+                  value={email}
+                  placeholder='Enter your email'
+                  onChange={onChange}
+                  required
+                  style={{ backgroundColor: "#e6c8fe", border: "none", borderRadius: "5px", padding: "10px", marginBottom: "15px" }}
+              />
+            </div>
+            <div className='form-group'>
+              <input
+                  type='password'
+                  className='form-control'
+                  id='password'
+                  name='password'
+                  value={password}
+                  placeholder='Enter password'
+                  onChange={onChange}
+                  required
+                  style={{ backgroundColor: "#c3edbf", border: "none", borderRadius: "5px", padding: "10px" }}
+              />
+            </div>
 
-          <div className='form-group'>
-            <button type='submit' className='btn btn-block'>
-              Submit
-            </button>
-          </div>
-        </form>
-      </section>
-    </Container>
+            <div className='form-group'>
+              <button type='submit' className='btn btn-block' style={{ backgroundColor: "#fbb9c5", color: "#fcf7e3", borderRadius: "5px", padding: "10px", border: "none", marginTop: "15px" }}>
+                Submit
+              </button>
+            </div>
+          </form>
+        </section>
+      </Container>
   )
 }
 

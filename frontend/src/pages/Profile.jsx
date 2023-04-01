@@ -19,45 +19,47 @@ const Profile = () => {
       },
     }
     axios
-      .get('/api/users/me', config)
-      .then(res => setCurrentUser(res.data))
-      .catch(err => toast.error(err))
+        .get('/api/users/me', config)
+        .then(res => setCurrentUser(res.data))
+        .catch(err => toast.error(err))
   },[]);
 
   return (
-    <Container style={{ width: "400px" }}>
-      <div className="p-3 box">
-        <h3 className="mb-3 text-center">My Profile</h3>
-          <div className="pb-2">
+      <Container style={{ width: "400px" }}>
+        <div className="p-3 box" style={{backgroundColor: "#fcf7e3"}}>
+          <h3 className="mb-3 text-center" style={{color: "#fbb9c5"}}>My Profile</h3>
+          <div className="pb-2" style={{color: "#b8dfe6"}}>
             Display name: {currentUser.firstName} {currentUser.lastName}
           </div>
-          <div className="pb-3">
+          <div className="pb-3" style={{color: "#b8dfe6"}}>
             Email: {currentUser.email}
           </div>
           {currentUser.image ? (
-            <div className="pb-3">
-              <img src={currentUser.image} alt = '' className='author-image' />
-            </div>): null
-          }
+              <div className="pb-3">
+                <img src={currentUser.image} alt='' className='author-image' />
+              </div>
+          ) : null}
           <div className="d-grid gap-2">
             <Button
-              variant="primary"
-              type="Submit"
-              onClick={() => navigate('/userForm/')}
+                variant="secondary"
+                type="submit"
+                style={{backgroundColor: "#e6c8fe", color: "#fbb9c5"}}
+                onClick={() => navigate('/userForm/')}
             >
               Edit My Profile
             </Button>
             <Button
-              variant="primary"
-              type="Submit"
-              onClick={() => navigate('/userHome')}
+                variant="secondary"
+                type="submit"
+                style={{backgroundColor: "#c3edbf", color: "#fbb9c5"}}
+                onClick={() => navigate('/userHome')}
             >
               Back to My Posts page
             </Button>
           </div>
-        
-      </div>
-    </Container>
+
+        </div>
+      </Container>
   )
 }
 
