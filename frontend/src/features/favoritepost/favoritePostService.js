@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API_URL = 'api/favoriteposts/'
 
-// Get all my favorite games
+// Get all my favorite products
 const getAllMyFavoritePosts = async (token) => {
   const config = {
     headers: {
