@@ -93,7 +93,7 @@ const PostDetail = () => {
           </Col>
           <Col>
             <Card.Text style={{ color: '#b8dfe6' }}>
-              Genre: {post.city} - {post.country}
+              Category: {post.city} - {post.country}
             </Card.Text>
             <Card.Text style={{ color: '#fcf7e3' }}>
               {post.content}
