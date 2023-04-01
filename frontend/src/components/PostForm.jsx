@@ -119,83 +119,88 @@ function PostForm({ postId, togglePostForm, returnAddForm }) {
 
 
   return (
-    <Container>
-      <div className="pb-2 box">
-        <div className='sub-header'>
-          <div onClick={()=>togglePostForm()} className='form-icon'>
+      <Container>
+        <div className="pb-2 box" style={{ backgroundColor: "#fcf7e3" }}>
+          <div className='sub-header'>
+            <div onClick={()=>togglePostForm()} className='form-icon' style={{ color: "#fbb9c5" }}>
               <FiX />
+            </div>
           </div>
-        </div>
-        <h3 className="mb-2 title">{postId ? "Update Post" : "New Post"}</h3>
+          <h3 className="mb-2 title" style={{ color: "#b8dfe6" }}>{postId ? "Update Post" : "New Post"}</h3>
 
-        <Form onSubmit={handleSubmit}>
-          <Form.Group controlId="formFile" className="mb-3">
-            <Form.Control
-              type="file"
-              accept='image/*'
-              onChange={(e) => setImage(e.target.files[0])}
-            />
-          </Form.Group>
-          {image? (
-            <Form.Group controlId="formCard" className="mb-3">
-              <Card>
-                <Card.Img variant="top" src={imagePath} />
-              </Card>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group controlId="formFile" className="mb-3">
+              <Form.Control
+                  type="file"
+                  accept='image/*'
+                  onChange={(e) => setImage(e.target.files[0])}
+              />
             </Form.Group>
-          ) : null}
-          <Form.Group className="mb-3">
-            <Form.Control
-              type="text"
-              id='title'
-              name='title'
-              value={title}
-              placeholder="Title"
-              onChange={onChange}
-              required
-            />
-          </Form.Group>
+            {image? (
+                <Form.Group controlId="formCard" className="mb-3">
+                  <Card>
+                    <Card.Img variant="top" src={imagePath} />
+                  </Card>
+                </Form.Group>
+            ) : null}
+            <Form.Group className="mb-3">
+              <Form.Control
+                  type="text"
+                  id='title'
+                  name='title'
+                  value={title}
+                  placeholder="Title"
+                  onChange={onChange}
+                  required
+                  style={{ backgroundColor: "#e6c8fe" }}
+              />
+            </Form.Group>
 
-          <Form.Group className="mb-3">
-            <Form.Control
-              type="text"
-              id='city'
-              name='city'
-              value={city}
-              placeholder="Category"
-              onChange={onChange}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Control
-              type="text"
-              id='country'
-              name='country'
-              value={country}
-              placeholder="Date"
-              onChange={onChange}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Control
-              as="textarea"
-              id='content'
-              name='content'
-              value={content}
-              placeholder="Content"
-              rows={10}
-              onChange={onChange}
-            />
-          </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Control
+                  type="text"
+                  id='city'
+                  name='city'
+                  value={city}
+                  placeholder="Category"
+                  onChange={onChange}
+                  style={{ backgroundColor: "#c3edbf" }}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Control
+                  type="text"
+                  id='country'
+                  name='country'
+                  value={country}
+                  placeholder="Date"
+                  onChange={onChange}
+                  style={{ backgroundColor: "#c3edbf" }}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Control
+                  as="textarea"
+                  id='content'
+                  name='content'
+                  value={content}
+                  placeholder="Content"
+                  rows={10}
+                  onChange={onChange}
+                  style={{ backgroundColor: "#e6c8fe" }}
+              />
+            </Form.Group>
 
-          <div className="d-grid gap-2">
-            <Button variant="primary" type="Submit">
-              {postId ? "Update Post" : "Add Post"}
-            </Button>
-          </div>
-        </Form>
-      </div>
-    </Container>
+            <div className="d-grid gap-2">
+              <Button variant="primary" type="Submit" style={{ backgroundColor: "#b8dfe6" }}>
+                {postId ? "Update Post" : "Add Post"}
+              </Button>
+            </div>
+          </Form>
+        </div>
+      </Container>
   )
+
 }
 
 // Define props types for postId, returnAddForm

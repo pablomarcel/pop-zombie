@@ -27,78 +27,124 @@ const NavBar = () => {
     }
   };
 
+  const bubblegumPalette = {
+    pink: "#fbb9c5",
+    purple: "#e6c8fe",
+    yellow: "#fcf7e3",
+    green: "#c3edbf",
+    blue: "#b8dfe6"
+  };
+
   return (
-		<nav className="navbar">
-			<NavLink to="/" className="nav-logo">
-        <img className='nav-img' src={logo} alt='logo' />
-        Pop Zombie
-      </NavLink>
-			<div onClick={()=>setOpen(!open)} className="nav-icon">
-				{open ? <FiX /> : <FiMenu />}
-			</div>
+      <nav className="navbar">
+        <NavLink to="/" className="nav-logo">
+          <img className="nav-img" src={logo} alt="logo" />
+          Pop Zombie
+        </NavLink>
+        <div onClick={() => setOpen(!open)} className="nav-icon">
+          {open ? <FiX /> : <FiMenu />}
+        </div>
 
-      {user ? (
-        <ul className={open ? 'nav-links active' : 'nav-links'}>
-          <li className="nav-item">
-            <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? 'active nav-link' : 'inactive nav-link')}
-              onClick={()=>setOpen(false)}
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink
-              to="/userHome"
-              className={({ isActive }) => (isActive ? 'active nav-link' : 'inactive nav-link')}
-              onClick={()=>setOpen(false)}
-            >
-              My Posts
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink
-              to="/favoritePost"
-              className={({ isActive }) => (isActive ? 'active nav-link' : 'inactive nav-link')}
-              onClick={()=>setOpen(false)}
-            >
-              My Favorite Products
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink
-              to={`/profile/${user._id}`}
-              className={({ isActive }) => (isActive ? 'active nav-link' : 'inactive nav-link')}
-              onClick={()=>setOpen(false)}
-            >
-              My Profile
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            {/* <Button onClick={handleLogout} variant="primary" size="sm">Log out</Button> */}
-            <button className='nav-btn' onClick={handleLogout}>
-              <FaSignOutAlt /> Logout
-            </button>
-          </li>
-          <li className="nav-item">
-            {userImage ? userImage : <div className='nav-text'>{username}</div>}
-          </li>
-        </ul>
-        ):(
-          <ul className={open ? 'nav-links active' : 'nav-links'}>
-            <li className="nav-item">
-              <NavLink to="/" className="nav-link" onClick={()=>setOpen(false)}>Home</NavLink>
-            </li>
+        {user ? (
+            <ul className={open ? "nav-links active" : "nav-links"}>
+              <li className="nav-item">
+                <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                        isActive ? "active nav-link" : "inactive nav-link"
+                    }
+                    onClick={() => setOpen(false)}
+                    style={{ color: bubblegumPalette.pink }}
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                    to="/userHome"
+                    className={({ isActive }) =>
+                        isActive ? "active nav-link" : "inactive nav-link"
+                    }
+                    onClick={() => setOpen(false)}
+                    style={{ color: bubblegumPalette.purple }}
+                >
+                  My Posts
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                    to="/favoritePost"
+                    className={({ isActive }) =>
+                        isActive ? "active nav-link" : "inactive nav-link"
+                    }
+                    onClick={() => setOpen(false)}
+                    style={{ color: bubblegumPalette.yellow }}
+                >
+                  My Favorite Products
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                    to={`/profile/${user._id}`}
+                    className={({ isActive }) =>
+                        isActive ? "active nav-link" : "inactive nav-link"
+                    }
+                    onClick={() => setOpen(false)}
+                    style={{ color: bubblegumPalette.green }}
+                >
+                  My Profile
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <button
+                    className="nav-btn"
+                    onClick={handleLogout}
+                    style={{ backgroundColor: bubblegumPalette.blue }}
+                >
+                  <FaSignOutAlt /> Logout
+                </button>
+              </li>
+              <li className="nav-item">
+                {userImage ? (
+                    userImage
+                ) : (
+                    <div className="nav-text" style={{ color: bubblegumPalette.pink }}>
+                      {username}
+                    </div>
+                )}
+              </li>
+            </ul>
+        ) : (
+            <ul className={open ? "nav-links active" : "nav-links"}>
+              <li className="nav-item">
+                <NavLink
+                    to="/"
+                    className="nav-link"
+                    onClick={() => setOpen(false)}
+                    style={{ color: bubblegumPalette.pink }}
+                >
+                  Home
+                </NavLink>
+              </li>
 
-            <li className="nav-item">
-              <NavLink to="/login" className="nav-link" onClick={()=>setOpen(false)}>
-                <FaSignInAlt /> Login
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/register" className="nav-link" onClick={()=>setOpen(false)}>
-                <FaUser /> Register
+              <li className="nav-item">
+                <NavLink
+                    to="/login"
+                    className="nav-link"
+                    onClick={() => setOpen(false)}
+                    style={{ color: bubblegumPalette.purple }}
+                >
+                  <FaSignInAlt /> Login
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                    to="/register"
+                    className="nav-link"
+                    onClick={() => setOpen(false)}
+                    style={{ color: bubblegumPalette.yellow }}
+                >
+                  <FaUser /> Register
               </NavLink>
             </li>
           </ul>

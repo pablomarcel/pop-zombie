@@ -38,40 +38,42 @@ const CommentForm = ({ postId, user, toggleCommentForm, refreshCommentData }) =>
   }
 
   return (
-    <Container>
-      <div className="pb-2 box">
-        <div className='sub-header'>
-          <div onClick={()=>toggleCommentForm()} className='form-icon'>
+      <Container>
+        <div className="pb-2 box" style={{ backgroundColor: '#fcf7e3' }}>
+          <div className='sub-header'>
+            <div onClick={()=>toggleCommentForm()} className='form-icon' style={{ backgroundColor: '#fbb9c5' }}>
               <FiX />
+            </div>
           </div>
-        </div>
-        <h3 className="mb-2 title">New Comment</h3>
+          <h3 className="mb-2 title" style={{ color: '#b8dfe6' }}>New Comment</h3>
 
-        <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3">
-            <Form.Control
-              as="textarea"
-              id='comment'
-              name='comment'
-              value={comment}
-              placeholder="Write a comment..."
-              rows={3}
-              onChange={(e) => setComment(e.target.value)}
-              required
-            />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Rating onClick={handleRating} ratingValue={rating} />
-          </Form.Group>
-          <div className="d-grid gap-2">
-            <Button variant="primary" type="Submit">
-              Add comment
-            </Button>
-          </div>
-        </Form>
-      </div>
-    </Container>
-  )
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3">
+              <Form.Control
+                  as="textarea"
+                  id='comment'
+                  name='comment'
+                  value={comment}
+                  placeholder="Write a comment..."
+                  rows={3}
+                  onChange={(e) => setComment(e.target.value)}
+                  required
+                  style={{ backgroundColor: '#e6c8fe' }}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Rating onClick={handleRating} ratingValue={rating} />
+            </Form.Group>
+            <div className="d-grid gap-2">
+              <Button variant="primary" type="Submit" style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf' }}>
+                Add comment
+              </Button>
+            </div>
+          </Form>
+        </div>
+      </Container>
+  );
+
 }
 
 CommentForm.propTypes = {

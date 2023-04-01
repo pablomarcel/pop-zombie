@@ -22,34 +22,35 @@ const Post = ({ post, showUsername, fromFavoritePostPage }) => {
                       <img src={default_image} alt = '' className='author-small-image' />;
     author = fromFavoritePostPage ?
               post.post? ` ${post.post.author.firstName} ${post.post.author.lastName} - `:''
-              : 
+              :
               post.author? ` ${post.author.firstName} ${post.author.lastName} - `:'';
   }
-  
+
   const postId = fromFavoritePostPage ? post.post._id : post._id;
   const title = fromFavoritePostPage ? post.post.title : post.title;
   const image = fromFavoritePostPage ? post.post.image : post.image;
-  
-  const postDate = post.updatedAt ? ` Last modified: ${formatDistance(new Date(post.updatedAt), new Date())}` : '';
-  
-  return (
-    <Card className='mb-2'>
-      <Link to={`/postDetail/${postId}`}>
-        {image ? <Card.Img src = {image} alt={title} className="w-100" /> : ''}
-      </Link>
 
-      <Card.Body>
+  const postDate = post.updatedAt ? ` Last modified: ${formatDistance(new Date(post.updatedAt), new Date())}` : '';
+
+  return (
+      <Card className='mb-2' style={{ backgroundColor: '#fcf7e3' }}>
         <Link to={`/postDetail/${postId}`}>
-          <Card.Title>{title}</Card.Title>
+          {image ? <Card.Img src={image} alt={title} className="w-100" style={{ borderRadius: '10px' }} /> : ''}
         </Link>
-        <Card.Text>
-          {authorImage}
-          {author}
-          {postDate}
-        </Card.Text>
-      </Card.Body>
-    </Card>
+
+        <Card.Body>
+          <Link to={`/postDetail/${postId}`}>
+            <Card.Title style={{ color: '#fbb9c5' }}>{title}</Card.Title>
+          </Link>
+          <Card.Text>
+            {authorImage}
+            <span style={{ color: '#b8dfe6' }}>{author}</span>
+            <span style={{ color: '#c3edbf' }}>{postDate}</span>
+          </Card.Text>
+        </Card.Body>
+      </Card>
   )
+
 }
 // Define proptypes for post, showUsername, fromFavoritePostPage
 Post.propTypes = {

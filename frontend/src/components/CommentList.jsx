@@ -16,30 +16,44 @@ const CommentList = ({ comments, refreshCommentData }) => {
         },
       };
       await axios
-        .delete(`/api/comments/${id}`, config)
-        .then(res => {
-          // Refresh the comment list after deleting this comment successful
-          refreshCommentData();
-          return res.data
-        })
-        .catch(err => toast.error(err));
+          .delete(`/api/comments/${id}`, config)
+          .then(res => {
+            // Refresh the comment list after deleting this comment successful
+            refreshCommentData();
+            return res.data
+          })
+          .catch(err => toast.error(err));
     }
   };
 
   return (
-    <>
-      {comments.map((comment) => 
-        <div key = {comment._id} className='comment'>
-          {user && user._id === comment.author._id ? (
-            <button onClick={() => deleteComment(comment._id)} className= 'close'>
-              <FaTrashAlt />
-            </button>)
-          : ''}
-          {/* Comment list component */}
-          <CommentDetail comment={comment} />
-        </div>
-      )}
-    </>
+      <>
+        {comments.map((comment) =>
+            <div key = {comment._id} className='comment' style={{
+              backgroundColor: '#fcf7e3',
+              border: '1px solid #e6c8fe',
+              borderRadius: '10px',
+              margin: '10px 0',
+              padding: '10px'
+            }}>
+              {user && user._id === comment.author._id ? (
+                      <button onClick={() => deleteComment(comment._id)} className= 'close' style={{
+                        backgroundColor: '#fcf7e3',
+                        borderRadius: '5px',
+                        border: 'none',
+                        color: '#b8dfe6',
+                        cursor: 'pointer',
+                        fontSize: '18px',
+                        padding: '5px'
+                      }}>
+                        <FaTrashAlt />
+                      </button>)
+                  : ''}
+              {/* Comment list component */}
+              <CommentDetail comment={comment} />
+            </div>
+        )}
+      </>
   )
 }
 
