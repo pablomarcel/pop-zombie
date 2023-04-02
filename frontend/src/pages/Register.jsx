@@ -80,7 +80,7 @@ function Register() {
 
   return (
       <Container style={{ width: "400px" }}>
-        <section className='heading' style={{ backgroundColor: "#e6c8fe" }}>
+        <section className='heading' style={{ backgroundColor: "#fcf7e3" }}>
           <h3 style={{ color: "#fbb9c5" }}>
             <FaUser /> Register
           </h3>

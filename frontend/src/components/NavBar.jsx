@@ -28,8 +28,8 @@ const NavBar = () => {
   };
 
   const bubblegumPalette = {
-    pink: "#fbb9c5",
-    purple: "#e6c8fe",
+    pink: "#f17891",
+    purple: "#b99ef5",
     yellow: "#fcf7e3",
     green: "#c3edbf",
     blue: "#b8dfe6"
@@ -37,7 +37,7 @@ const NavBar = () => {
 
   return (
       <nav className="navbar">
-        <NavLink to="/" className="nav-logo">
+        <NavLink to="/" className="nav-logo" activeStyle={{ color: '#f17891' }}>
           <img className="nav-img" src={logo} alt="logo" />
           Pop Zombie
         </NavLink>
@@ -80,7 +80,7 @@ const NavBar = () => {
                     onClick={() => setOpen(false)}
                     style={{ color: bubblegumPalette.yellow }}
                 >
-                  My Favorite Products
+                  My Favorites
                 </NavLink>
               </li>
               <li className="nav-item">

@@ -43,7 +43,7 @@ const Profile = () => {
             <Button
                 variant="secondary"
                 type="submit"
-                style={{backgroundColor: "#e6c8fe", color: "#fbb9c5"}}
+                style={{backgroundColor: "#c3edbf", borderColor: '#c3edbf', color: "white"}}
                 onClick={() => navigate('/userForm/')}
             >
               Edit My Profile
@@ -51,10 +51,10 @@ const Profile = () => {
             <Button
                 variant="secondary"
                 type="submit"
-                style={{backgroundColor: "#c3edbf", color: "#fbb9c5"}}
+                style={{backgroundColor: "#e6c8fe", borderColor: '#e6c8fe', color: "white"}}
                 onClick={() => navigate('/userHome')}
             >
-              Back to My Posts page
+              Back to My Posts
             </Button>
           </div>
 
