@@ -48,7 +48,7 @@ const Home = () => {
     return <Spinner />
   }
   // Set the number of items for each page
-  const postsPerPage = 2;
+  const postsPerPage = 10;
   const pagesVisited = pageNumber * postsPerPage;
   // This function is used to display the set of items on the home page
   const displayPosts = posts
