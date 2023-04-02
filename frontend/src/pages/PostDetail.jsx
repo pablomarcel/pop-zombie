@@ -113,7 +113,7 @@ const PostDetail = () => {
               </Card.Body>
             </div>
 
-            <Card className='mb-2'>
+            <Card className='mb-2' style={{ backgroundColor: '#e6c8fe' }}>
               <Card.Body>
                 {comments && comments.length > 0 ? <CommentList comments={comments} refreshCommentData={refreshCommentData} /> : null}
               </Card.Body>
