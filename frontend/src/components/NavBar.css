@@ -4,6 +4,8 @@
 	--cream: #fcf7e3;
 	--green: #c3edbf;
 	--blue: #b8dfe6;
+	--darkPink: #f17891;
+	--darkPurple: #b99ef5;
 }
 
 .navbar {
@@ -29,7 +31,7 @@
 
 .nav-logo {
 	text-decoration: none;
-	color: var(--pink);
+	color: var(--darkPurple);
 	font-size: 2rem;
 	font-family: 'Poppins', sans-serif;
 }

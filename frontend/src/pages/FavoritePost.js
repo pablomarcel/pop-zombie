@@ -72,7 +72,7 @@ const FavoritePost = () => {
                             onClick={() => delMyFavoritePost(post._id)}
                             style={{ backgroundColor: '#e6c8fe', borderColor: '#e6c8fe' }}
                         >
-                          Remove from My Favorite Products
+                          Remove
                         </Button>
                       </div>
                   )}
@@ -83,7 +83,7 @@ const FavoritePost = () => {
           </Col>
           {/* Image Slide Show area */}
           <Col className={toggleSlideShow? "show":"hide"}>
-            <h3 className='title' style={{ color: '#b8dfe6' }}>Product Reviews Slide Show</h3>
+            <h3 className='title' style={{ color: '#b8dfe6' }}>Product Slide Show</h3>
             {posts.length > 0 ? (<ImageSlideShow posts={posts} />):('')}
           </Col>
         </Row>

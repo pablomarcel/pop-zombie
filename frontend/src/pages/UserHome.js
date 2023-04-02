@@ -70,14 +70,25 @@ const UserHome = () => {
       <Container fluid>
         {/* Rendering button showing/hiding slide show */}
         <div className={toggleDisplay ? "hide" : "right__side mt-2"}>
+          {/* Add New Post Button */}
+          {!toggleDisplay ? (
+              <Button variant="outline-pink" onClick={() => togglePostForm()} className="mr-2" style={{ marginRight: '8px' }}>
+                Add New Post
+              </Button>
+          ) : (
+              ""
+          )}
+
           <Button
               variant="outline-pink"
               size="sm"
               onClick={() => setToggleSlideShow(!toggleSlideShow)}
+              style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf' }}
           >
             {toggleSlideShow ? "Hide Slide Show" : "Show Slide Show"}
           </Button>
         </div>
+
         <Row>
           {/* Post Form area */}
           <Col className={toggleDisplay ? "show" : "hide"}>
@@ -90,14 +101,8 @@ const UserHome = () => {
           </Col>
           {/* User's Post-List area */}
           <Col>
-            <h3 className="title">My Post-List</h3>
-            {!toggleDisplay ? (
-                <Button variant="outline-pink" onClick={() => togglePostForm()}>
-                  Add New Post
-                </Button>
-            ) : (
-                ""
-            )}
+            <h3 className="title" style={{ color: "#fbb9c5" }}>My Posts List</h3>
+
             {posts.length > 0 ? (
                 <>
                   {posts.map((post, idx) => (
@@ -108,21 +113,24 @@ const UserHome = () => {
                             fromFavoritePostPage={false}
                         />
                         {/* Update Button */}
-                        <Button
-                            variant="outline-pink"
-                            size="sm"
-                            onClick={() => updateForm(post._id)}
-                        >
-                          Update
-                        </Button>{" "}
-                        {/* Delete button */}
-                        <Button
-                            variant="outline-yellow"
-                            size="sm"
-                            onClick={() => delPost(post._id)}
-                        >
-                          Delete
-                        </Button>
+                        <div>
+                          <Button
+                              variant="pink"
+                              size="sm"
+                              onClick={() => updateForm(post._id)}
+                              style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf', width: '20%', marginRight: '8px' }}
+                          >
+                            Update
+                          </Button>
+                          <Button
+                              variant="outline-yellow"
+                              size="sm"
+                              onClick={() => delPost(post._id)}
+                              style={{ backgroundColor: '#e6c8fe', borderColor: '#e6c8fe', width: '20%', marginTop: '8px' }}
+                          >
+                            Delete
+                          </Button>
+                        </div>
                       </div>
                   ))}
                 </>
@@ -132,12 +140,14 @@ const UserHome = () => {
           </Col>
           {/* Post Form */}
           <Col className={!toggleDisplay && toggleSlideShow ? "show" : "hide"}>
-            <h3 className="title">My Posts Image Slide Show</h3>
+            <h3 className="title" style={{ color: "#b8dfe6" }}>My Posts Slide Show</h3>
             {posts.length > 0 ? <ImageSlideShow posts={posts} /> : ""}
           </Col>
         </Row>
       </Container>
   );
+
+
 
 }
 

@@ -83,9 +83,10 @@ const Home = () => {
             {/* Rendering button showing/hiding slide show */}
             <div className="right__side mt-2">
               <Button
-                  variant="outline-primary"
+                  variant="primary"
                   size="sm"
                   onClick={()=> setToggleSlideShow(!toggleSlideShow)}
+                  style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf' }}
               >
                 {toggleSlideShow? "Hide Slide Show" : "Show Slide Show"}
               </Button>
@@ -111,7 +112,7 @@ const Home = () => {
                     })
                   }
                 </ListGroup>) : null}
-            <h3 className='title mb-2' style={{color: "#e6c8fe"}}>Review List</h3>
+            <h3 className='title mb-2' style={{color: "#fbb9c5"}}>Product List</h3>
             {posts.length > 0 ? (
                 <>
                   {displayPosts}
@@ -135,7 +136,7 @@ const Home = () => {
           </Col>
           {/* Image Slide Show area */}
           <Col className={toggleSlideShow? "show":"hide"}>
-            <h3 className='title mb-2' style={{color: "#e6c8fe"}}>Product Reviews Slide Show</h3>
+            <h3 className='title mb-2' style={{color: "#b8dfe6"}}>Product Slide Show</h3>
             {posts.length > 0 ? (<ImageSlideShow posts={posts} />):('')}
           </Col>
         </Row>

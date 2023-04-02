@@ -83,7 +83,7 @@ const PostDetail = () => {
             <Card className='mb-2' style={{ backgroundColor: '#fcf7e3' }}>
               {post.image ? <Card.Img src={post.image} alt={post.title} /> : ''}
               <Card.Body>
-                <Card.Text>
+                <Card.Text style={{ color: '#b8dfe6' }}>
                   <img src={authorImage} alt='' className='author-small-image' />
                   {post.author ? ` ${post.author.firstName} ${post.author.lastName}` : ''}
                   {post.updatedAt ? ` - Last modified: ${formatDistance(new Date(post.updatedAt), new Date())}` : ''}
@@ -92,15 +92,15 @@ const PostDetail = () => {
             </Card>
           </Col>
           <Col>
-            <Card.Text style={{ color: '#b8dfe6' }}>
+            <Card.Text style={{ color: '#e6c8fe' }}>
               Category: {post.city} - {post.country}
             </Card.Text>
-            <Card.Text style={{ color: '#fcf7e3' }}>
+            <Card.Text style={{ color: '#b8dfe6' }}>
               {post.content}
             </Card.Text>
             {user && !toggleForm ?
                 (<div className="mb-2">
-                  <Button variant="outline-primary" type="submit" onClick={() => toggleCommentForm()} style={{ backgroundColor: '#e6c8fe', color: '#000' }}>
+                  <Button variant="outline-primary" type="submit" onClick={() => toggleCommentForm()} style={{ backgroundColor: '#e6c8fe', borderColor: '#e6c8fe', color: 'white' }}>
                     Add New Comment
                   </Button>
 
@@ -121,12 +121,12 @@ const PostDetail = () => {
           </Col>
         </Row>
 
-        <Button variant="outline-primary" type="submit" onClick={() => navigate('/')} style={{ backgroundColor: '#c3edbf', color: '#000' }}>
-          Back to Home Page
+        <Button variant="outline-primary" type="submit" onClick={() => navigate('/')} style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf', color: 'white', width: '10%', marginRight: '8px' }}>
+          Back to Home
         </Button>{"  "}
         {user ?
-            <Button variant="outline-primary" type="submit" onClick={addMyFavoritePost} style={{ backgroundColor: '#b8dfe6', color: '#000' }}>
-              Add to My Favorite Products
+            <Button variant="outline-primary" type="submit" onClick={addMyFavoritePost} style={{ backgroundColor: '#e6c8fe', borderColor: '#e6c8fe', color: 'white', width: '10%', marginTop: '8px' }}>
+              Add to Favorites
             </Button>
             : ''
         }
