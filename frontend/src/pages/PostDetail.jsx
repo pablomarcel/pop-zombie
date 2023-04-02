@@ -121,11 +121,11 @@ const PostDetail = () => {
           </Col>
         </Row>
 
-        <Button variant="outline-primary" type="submit" onClick={() => navigate('/')} style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf', color: 'white', width: '10%', marginRight: '8px' }}>
+        <Button variant="outline-primary" type="submit" onClick={() => navigate('/')} style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf', color: 'white', width: '15%', marginRight: '8px' }}>
           Back to Home
         </Button>{"  "}
         {user ?
-            <Button variant="outline-primary" type="submit" onClick={addMyFavoritePost} style={{ backgroundColor: '#e6c8fe', borderColor: '#e6c8fe', color: 'white', width: '10%', marginTop: '8px' }}>
+            <Button variant="outline-primary" type="submit" onClick={addMyFavoritePost} style={{ backgroundColor: '#e6c8fe', borderColor: '#e6c8fe', color: 'white', width: '15%', marginTop: '8px' }}>
               Add to Favorites
             </Button>
             : ''

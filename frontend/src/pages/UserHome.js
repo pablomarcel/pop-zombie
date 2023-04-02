@@ -118,7 +118,7 @@ const UserHome = () => {
                               variant="pink"
                               size="sm"
                               onClick={() => updateForm(post._id)}
-                              style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf', width: '20%', marginRight: '8px' }}
+                              style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf', width: '30%', marginRight: '8px' }}
                           >
                             Update
                           </Button>
@@ -126,7 +126,7 @@ const UserHome = () => {
                               variant="outline-yellow"
                               size="sm"
                               onClick={() => delPost(post._id)}
-                              style={{ backgroundColor: '#e6c8fe', borderColor: '#e6c8fe', width: '20%', marginTop: '8px' }}
+                              style={{ backgroundColor: '#e6c8fe', borderColor: '#e6c8fe', width: '30%', marginTop: '8px' }}
                           >
                             Delete
                           </Button>
