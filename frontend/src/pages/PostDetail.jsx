@@ -77,7 +77,7 @@ const PostDetail = () => {
 
   return (
       <Container fluid>
-        <div className='title bottom__line' style={{ backgroundColor: '#fcf7e3' }}>{post.title}</div>
+        <div className='title bottom__line' style={{ backgroundColor: '#fcf7e3', color: "#fbb9c5" }}>{post.title}</div>
         <Row>
           <Col>
             <Card className='mb-2' style={{ backgroundColor: '#fcf7e3' }}>
