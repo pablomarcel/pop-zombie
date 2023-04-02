@@ -32,7 +32,10 @@ const NavBar = () => {
     purple: "#b99ef5",
     yellow: "#fcf7e3",
     green: "#c3edbf",
-    blue: "#b8dfe6"
+    blue: "#b8dfe6",
+    darkBlue: "#7f9ca9",
+    bootstrapBlue: "#4892ff",
+    bootstrapGreen: "#34b569"
   };
 
   return (
@@ -78,7 +81,7 @@ const NavBar = () => {
                         isActive ? "active nav-link" : "inactive nav-link"
                     }
                     onClick={() => setOpen(false)}
-                    style={{ color: bubblegumPalette.yellow }}
+                    style={{ color: bubblegumPalette.bootstrapBlue }}
                 >
                   My Favorites
                 </NavLink>
@@ -90,7 +93,7 @@ const NavBar = () => {
                         isActive ? "active nav-link" : "inactive nav-link"
                     }
                     onClick={() => setOpen(false)}
-                    style={{ color: bubblegumPalette.green }}
+                    style={{ color: bubblegumPalette.bootstrapGreen }}
                 >
                   My Profile
                 </NavLink>
