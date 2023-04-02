@@ -102,7 +102,7 @@ function UserForm() {
 
   return (
       <Container style={{ width: "400px" }}>
-        <section className='heading' style={{ backgroundColor: "#fbb9c5" }}>
+        <section className='heading' style={{ backgroundColor: "#fcf7e3" }}>
           <h3>
             <FaUser style={{ color: "#e6c8fe" }} /> Update Profile
           </h3>
@@ -163,7 +163,7 @@ function UserForm() {
                   variant="outline-primary"
                   size="sm"
                   onClick={() => setToggleChangePassword(!toggleChangePassword)}
-                  style={{ backgroundColor: "#fbb9c5", borderColor: "#e6c8fe", color: "#e6c8fe" }}
+                  style={{ backgroundColor: "#fbb9c5", borderColor: "#fbb9c5", color: "white", width: "100%" }}
               >
                 {toggleChangePassword? 'Disable Change Password': 'Change Password'}
               </Button>
@@ -210,7 +210,7 @@ function UserForm() {
             ) : null}
 
             <div className='form-group'>
-              <button type='submit' className='btn btn-block' style={{ backgroundColor: "#fbb9c5" }}>
+              <button type='submit' className='btn btn-block' style={{ backgroundColor: "#e6c8fe", borderColor: "#e6c8fe" }}>
                 Submit
               </button>
             </div>

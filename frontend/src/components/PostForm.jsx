@@ -152,7 +152,7 @@ function PostForm({ postId, togglePostForm, returnAddForm }) {
                   placeholder="Title"
                   onChange={onChange}
                   required
-                  style={{ backgroundColor: "#e6c8fe" }}
+                  style={{ backgroundColor: "#c3edbf" }}
               />
             </Form.Group>
 
@@ -192,7 +192,7 @@ function PostForm({ postId, togglePostForm, returnAddForm }) {
             </Form.Group>
 
             <div className="d-grid gap-2">
-              <Button variant="primary" type="Submit" style={{ backgroundColor: "#b8dfe6" }}>
+              <Button variant="primary" type="Submit" style={{ backgroundColor: "#b8dfe6", borderColor: "#b8dfe6", width: "20%" }}>
                 {postId ? "Update Post" : "Add Post"}
               </Button>
             </div>
