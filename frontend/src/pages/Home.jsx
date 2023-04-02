@@ -68,80 +68,106 @@ const Home = () => {
   return (
       <Container fluid>
         <Row>
-          <Col>
-            <Form className='mt-2'>
-              <FormControl
-                  type="search"
-                  placeholder="Search..."
-                  className="me-5"
-                  aria-label="Search"
-                  onChange={searchPost} // onChange will trigger "search post"
-              />
-            </Form>
-          </Col>
+
           <Col>
             {/* Rendering button showing/hiding slide show */}
             <div className="right__side mt-2">
               <Button
                   variant="primary"
                   size="sm"
-                  onClick={()=> setToggleSlideShow(!toggleSlideShow)}
-                  style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf' }}
+                  onClick={() => setToggleSlideShow(!toggleSlideShow)}
+                  style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf'}}
               >
-                {toggleSlideShow? "Hide Slide Show" : "Show Slide Show"}
+                {toggleSlideShow ? "Hide Slide Show" : "Show Slide Show"}
               </Button>
             </div>
           </Col>
         </Row>
 
         <Row>
-          {/* Post-List area */}
-          <Col>
-            {postList.length > 0 ? (
-                <ListGroup variant="flush" as="ol">
-                  {
-                    postList.map((post) => {
-                      return (
-                          <ListGroup.Item key={post._id}>
-                            <div className="fw-bold h4" style={{color: "#fbb9c5"}}>
-                              <Link to={`/postDetail/${post._id}`} style={{ textDecoration: 'none', color: "#fbb9c5" }}>{post.title}</Link>
-                            </div>
-                            <div style={{color: "#b8dfe6"}}>{post.content} - <span className="text-secondary">{`Last modified: ${formatDistance(new Date(post.updatedAt), new Date())}`}</span></div>
-                          </ListGroup.Item>
-                      );
-                    })
-                  }
-                </ListGroup>) : null}
-            <h3 className='title mb-2' style={{color: "#fbb9c5"}}>Product List</h3>
-            {posts.length > 0 ? (
-                <>
-                  {displayPosts}
-                </>
-            ) : ('')
-            }
-            {/* Rendering the pagination buttons */}
-            <Row className='pt-2'>
-              <ReactPaginate
-                  previousLabel={<FcPrevious />}
-                  nextLabel={<FcNext />}
-                  pageCount={pageCount}
-                  onPageChange={changePage}
-                  containerClassName={"paginationBttns"}
-                  previousLinkClassName={"previousBttn"}
-                  nextLinkClassName={"nextBttn"}
-                  disabledClassName={"paginationDisabled"}
-                  activeClassName={"paginationActive"}
-              />
-            </Row>
+          {/* Dividing the screen into 3 columns */}
+          <Col xs={12} md={4}></Col> {/* Adding an empty column to maintain equal spacing */}
+
+          <Col xs={12} md={4} className="d-flex justify-content-center align-items-center">
+
+            {/* Post-List area */}
+            <Col>
+              <div>
+                <Row className="mb-2">
+                  <Col>
+                    <Form className='mt-2'>
+                      <FormControl
+                          type="search"
+                          placeholder="Search..."
+                          className="me-5"
+                          aria-label="Search"
+                          onChange={searchPost} // onChange will trigger "search post"
+
+                      />
+                    </Form>
+                  </Col>
+
+                </Row>
+              </div>
+
+              <Row>
+                {postList.length > 0 ? (
+                    <ListGroup variant="flush" as="ol">
+                      {
+                        postList.map((post) => {
+                          return (
+                              <ListGroup.Item key={post._id}>
+                                <div className="fw-bold h4" style={{ color: "#fbb9c5" }}>
+                                  <Link to={`/postDetail/${post._id}`} style={{ textDecoration: 'none', color: "#fbb9c5" }}>{post.title}</Link>
+                                </div>
+                                <div style={{ color: "#b8dfe6" }}>{post.content} - <span className="text-secondary">{`Last modified: ${formatDistance(new Date(post.updatedAt), new Date())}`}</span></div>
+                              </ListGroup.Item>
+                          );
+                        })
+                      }
+                    </ListGroup>) : null}
+                <div>
+                  <Row className="mb-2">
+                    {/* Image Slide Show area */}
+                    <div className={toggleSlideShow ? "show" : "hide"}>
+                      <h3 className='title mb-2' style={{ color: "#b8dfe6" }}>Product Slide Show</h3>
+                      {posts.length > 0 ? (<ImageSlideShow posts={posts} />) : ('')}
+                    </div>
+                  </Row>
+                </div>
+                <h3 className='title mb-2' style={{ color: "#fbb9c5" }}>Product List</h3>
+                {posts.length > 0 ? (
+                    <>
+                      {displayPosts}
+                    </>
+                ) : ('')
+                }
+              </Row>
+
+
+              {/* Rendering the pagination buttons */}
+              <Row className='pt-2'>
+                <ReactPaginate
+                    previousLabel={<FcPrevious />}
+                    nextLabel={<FcNext />}
+                    pageCount={pageCount}
+                    onPageChange={changePage}
+                    containerClassName={"paginationBttns"}
+                    previousLinkClassName={"previousBttn"}
+                    nextLinkClassName={"nextBttn"}
+                    disabledClassName={"paginationDisabled"}
+                    activeClassName={"paginationActive"}
+                />
+              </Row>
+
+            </Col>
           </Col>
-          {/* Image Slide Show area */}
-          <Col className={toggleSlideShow? "show":"hide"}>
-            <h3 className='title mb-2' style={{color: "#b8dfe6"}}>Product Slide Show</h3>
-            {posts.length > 0 ? (<ImageSlideShow posts={posts} />):('')}
-          </Col>
+
         </Row>
       </Container>
   );
+
+
 
 }
 

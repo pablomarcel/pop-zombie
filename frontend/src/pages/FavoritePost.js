@@ -70,7 +70,7 @@ const FavoritePost = () => {
                             variant="outline-danger"
                             size="sm"
                             onClick={() => delMyFavoritePost(post._id)}
-                            style={{ backgroundColor: '#e6c8fe', borderColor: '#e6c8fe' }}
+                            style={{ backgroundColor: '#e6c8fe', borderColor: '#e6c8fe', width: '30%' }}
                         >
                           Remove
                         </Button>
