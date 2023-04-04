@@ -130,12 +130,12 @@ const Home = () => {
                   <Row className="mb-2">
                     {/* Image Slide Show area */}
                     <div className={toggleSlideShow ? "show" : "hide"}>
-                      <h3 className='title mb-2' style={{ color: "#b8dfe6" }}>Product Slide Show</h3>
+                      <h3 className='title mb-2' style={{ color: "#b8dfe6" }}>Pop Zombie Slide Show</h3>
                       {posts.length > 0 ? (<ImageSlideShow posts={posts} />) : ('')}
                     </div>
                   </Row>
                 </div>
-                <h3 className='title mb-2' style={{ color: "#fbb9c5" }}>Product List</h3>
+                <h3 className='title mb-2' style={{ color: "#fbb9c5" }}>Pop Zombie List</h3>
                 {posts.length > 0 ? (
                     <>
                       {displayPosts}

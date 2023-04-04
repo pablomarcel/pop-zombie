@@ -58,7 +58,7 @@ const FavoritePost = () => {
 
         <Row>
           <Col>
-            <h3 className='title' style={{ color: '#fbb9c5' }}>My Favorite Products</h3>
+            <h3 className='title' style={{ color: '#fbb9c5' }}>My Favorites</h3>
 
             {favoriteposts.length > 0 ? (
                 <>
@@ -83,7 +83,7 @@ const FavoritePost = () => {
           </Col>
           {/* Image Slide Show area */}
           <Col className={toggleSlideShow? "show":"hide"}>
-            <h3 className='title' style={{ color: '#b8dfe6' }}>Product Slide Show</h3>
+            <h3 className='title' style={{ color: '#b8dfe6' }}>Pop Zombie Slide Show</h3>
             {posts.length > 0 ? (<ImageSlideShow posts={posts} />):('')}
           </Col>
         </Row>
