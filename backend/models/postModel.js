@@ -28,7 +28,7 @@ const postSchema = mongoose.Schema(
       required: false,
     },
     airBnBPrice: {
-      type: Number,
+      type: String,
       required: false,
     },
     hotelPrice: {

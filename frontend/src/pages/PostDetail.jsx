@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import { Card, Container, Row, Col, Button } from "react-bootstrap";
+import { Card, Container, Row, Col, Button, NavLink } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import { toast } from "react-toastify";
@@ -95,9 +95,29 @@ const PostDetail = () => {
             <Card.Text style={{ color: '#e6c8fe' }}>
               Category: {post.city} - {post.country}
             </Card.Text>
-            <Card.Text style={{ color: '#b8dfe6' }}>
+
+            {post.airBnBPrice ? (
+                <a href={post.airBnBPrice} target="_blank" rel="noopener noreferrer">
+                  <Button
+                      variant="primary"
+                      style={{
+                        backgroundColor: "#4892ff",
+                        color: "white",
+                        borderColor: "#4892ff",
+                        marginBottom: "16px",
+                      }}
+                  >
+                    Click Link
+                  </Button>
+                </a>
+            ) : null}
+
+
+
+            <Card.Text style={{ color: '#7f9ca9' }}>
               {post.content}
             </Card.Text>
+
             {user && !toggleForm ?
                 (<div className="mb-2">
                   <Button variant="outline-primary" type="submit" onClick={() => toggleCommentForm()} style={{ backgroundColor: '#e6c8fe', borderColor: '#e6c8fe', color: 'white' }}>

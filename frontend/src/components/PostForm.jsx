@@ -13,7 +13,7 @@ function PostForm({ postId, togglePostForm, returnAddForm }) {
     city: '',
     country: '',
     content: '',
-    airBnBPrice: 0,
+    airBnBPrice: '',
     hotelPrice: 0,
     couplePrice: 0,
     familyPrice: 0,
@@ -32,7 +32,7 @@ function PostForm({ postId, togglePostForm, returnAddForm }) {
         city: '',
         country: '',
         content: '',
-        airBnBPrice: 0,
+        airBnBPrice: '',
         hotelPrice: 0,
         couplePrice: 0,
         familyPrice: 0,
@@ -50,7 +50,7 @@ function PostForm({ postId, togglePostForm, returnAddForm }) {
           city: res.data[0].city? res.data[0].city : '',
           country: res.data[0].country? res.data[0].country : '',
           content: res.data[0].content? res.data[0].content : '',
-          airBnBPrice: res.data[0].airBnBPrice? res.data[0].airBnBPrice : 0,
+          airBnBPrice: res.data[0].airBnBPrice? res.data[0].airBnBPrice : '',
           hotelPrice: res.data[0].hotelPrice? res.data[0].hotelPrice : 0,
           couplePrice: res.data[0].couplePrice? res.data[0].couplePrice : 0,
           familyPrice: res.data[0].familyPrice? res.data[0].familyPrice : 0,
@@ -163,6 +163,17 @@ function PostForm({ postId, togglePostForm, returnAddForm }) {
                   name='city'
                   value={city}
                   placeholder="Category"
+                  onChange={onChange}
+                  style={{ backgroundColor: "#c3edbf" }}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Control
+                  type="text"
+                  id='airBnBPrice'
+                  name='airBnBPrice'
+                  value={airBnBPrice}
+                  placeholder="Link"
                   onChange={onChange}
                   style={{ backgroundColor: "#c3edbf" }}
               />

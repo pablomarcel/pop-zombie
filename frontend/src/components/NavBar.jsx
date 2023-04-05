@@ -40,7 +40,7 @@ const NavBar = () => {
 
   return (
       <nav className="navbar">
-        <NavLink to="/" className="nav-logo" activeStyle={{ color: '#f17891' }}>
+        <NavLink to="/" className="nav-logo">
           <img className="nav-img" src={logo} alt="logo" />
           Pop Zombie
         </NavLink>
