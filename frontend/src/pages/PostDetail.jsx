@@ -79,7 +79,17 @@ const PostDetail = () => {
 
   return (
       <Container fluid>
-        <div className='title bottom__line' style={{ backgroundColor: '#fcf7e3', color: "#fbb9c5" }}>{post.title}</div>
+        <div className='title bottom__line' style={{
+          backgroundColor: '#fcf7e3',
+          color: "#88d8c0",
+          marginTop:'8px',
+          marginBottom:'8px',
+          textAlign:'left'
+
+
+        }}>
+          <strong>{post.title}</strong>
+        </div>
         <Row>
           <Col>
             <Card className='mb-2' style={{ backgroundColor: '#fcf7e3' }}>
@@ -94,9 +104,13 @@ const PostDetail = () => {
             </Card>
           </Col>
           <Col>
-            <Card.Text style={{ color: '#e6c8fe' }}>
-              Category: {post.city} - {post.country}
+            <Card.Text style={{
+              color: '#e6c8fe'
+            }}>
+              <strong>Category:</strong><strong><span style={{color: '#f17891'}}>{post.city}</span></strong> - <strong><span style={{color: '#88d8c0'}}>{post.country}</span></strong>
             </Card.Text>
+
+
 
             {post.airBnBPrice ? (
                 <a href={post.airBnBPrice} target="_blank" rel="noopener noreferrer">
