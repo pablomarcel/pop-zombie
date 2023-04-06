@@ -8,6 +8,8 @@ import formatDistance from 'date-fns/formatDistance';
 import CommentList from "../components/CommentList";
 import CommentForm from "../components/CommentForm";
 import default_image from '../logo/default_user.jpg';
+import ReactMarkdown from "react-markdown";
+import './markdownStyles.css'
 
 const PostDetail = () => {
   const { id } = useParams();
@@ -113,9 +115,9 @@ const PostDetail = () => {
                 </a>
             ) : null}
 
-            <Card.Text style={{ color: '#7f9ca9' }}>
-              {post.content}
-            </Card.Text>
+            <div className="markdown-container">
+              <ReactMarkdown>{post.content}</ReactMarkdown>
+            </div>
 
             {user && !toggleForm ?
                 (<div className="mb-2">
