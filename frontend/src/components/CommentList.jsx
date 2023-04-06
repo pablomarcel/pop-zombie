@@ -31,7 +31,7 @@ const CommentList = ({ comments, refreshCommentData }) => {
         {comments.map((comment) =>
             <div key = {comment._id} className='comment' style={{
               backgroundColor: '#fcf7e3',
-              border: '1px solid #e6c8fe',
+              border: '1px solid #fcf7e3',
               borderRadius: '10px',
               margin: '10px 0',
               padding: '10px'

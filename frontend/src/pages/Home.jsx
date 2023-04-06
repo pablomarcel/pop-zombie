@@ -19,8 +19,16 @@ const Home = () => {
   const [pageNumber, setPageNumber] = useState(0);
   const [postList, setPostList] = useState({});
   const dispatch = useDispatch()
-
   const { posts, isLoading, isError, message } = useSelector((state) => state.posts)
+
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const categories = [...new Set(posts.map((post) => post.city))];
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+  const filteredPosts = selectedCategory
+      ? posts.filter((post) => post.city === selectedCategory)
+      : posts;
 
   useEffect(() => {
     if (isError) {
@@ -51,7 +59,7 @@ const Home = () => {
   const postsPerPage = 10;
   const pagesVisited = pageNumber * postsPerPage;
   // This function is used to display the set of items on the home page
-  const displayPosts = posts
+  const displayPosts = filteredPosts
     .slice(pagesVisited, pagesVisited + postsPerPage)
     .map((post, idx) => {
       return (
@@ -76,7 +84,11 @@ const Home = () => {
                   variant="primary"
                   size="sm"
                   onClick={() => setToggleSlideShow(!toggleSlideShow)}
-                  style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf'}}
+                  style={{
+                    backgroundColor: '#c3edbf',
+                    borderColor: '#c3edbf',
+                    width:'13%'
+              }}
               >
                 {toggleSlideShow ? "Hide Slide Show" : "Show Slide Show"}
               </Button>
@@ -86,7 +98,36 @@ const Home = () => {
 
         <Row>
           {/* Dividing the screen into 3 columns */}
-          <Col xs={12} md={4}></Col> {/* Adding an empty column to maintain equal spacing */}
+          <Col xs={12} md={4}>
+            <Row className="mt-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Col>
+                <h3 style={{
+                  color: '#80E1D1',
+                  fontSize:'22px',
+                }}>Categories</h3>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <div className="d-grid gap-2">
+                  {categories.map((category, index) => (
+                      <Button
+                          key={index}
+                          variant="outline-primary"
+                          onClick={() => handleCategoryClick(category)}
+                          style={{
+                            backgroundColor: '#FFA07A',
+                            borderColor: '#FFA07A',
+                            width:'50%'
+                          }}
+                      >
+                        {category}
+                      </Button>
+                  ))}
+                </div>
+              </Col>
+            </Row>
+          </Col>
 
           <Col xs={12} md={4} className="d-flex justify-content-center align-items-center">
 
@@ -166,8 +207,6 @@ const Home = () => {
         </Row>
       </Container>
   );
-
-
 
 }
 

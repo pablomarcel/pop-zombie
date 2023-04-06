@@ -65,10 +65,12 @@ function Login() {
   return (
       <Container style={{ width: "400px", backgroundColor: "#fcf7e3", padding: "30px", borderRadius: "10px" }}>
         <section className='heading'>
-          <h3 style={{ color: "#fbb9c5", marginBottom: "15px" }}>
+          <h3 style={{
+            color: "#fbb9c5",
+            marginBottom: "15px" }}>
             <FaSignInAlt style={{ marginRight: "10px" }} /> Login
           </h3>
-          <h4 style={{ color: "#b8dfe6" }}>Login and start posting posts</h4>
+          <h4 style={{ color: "#b8dfe6" }}>Login to post</h4>
         </section>
 
         <section className='form'>
