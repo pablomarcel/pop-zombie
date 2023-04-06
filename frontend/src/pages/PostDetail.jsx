@@ -101,18 +101,17 @@ const PostDetail = () => {
                   <Button
                       variant="primary"
                       style={{
-                        backgroundColor: "#4892ff",
+                        backgroundColor: "#FFA07A",
                         color: "white",
-                        borderColor: "#4892ff",
+                        borderColor: "#FFA07A",
                         marginBottom: "16px",
+                        width:'30%'
                       }}
                   >
-                    Click Link
+                    Visit Website
                   </Button>
                 </a>
             ) : null}
-
-
 
             <Card.Text style={{ color: '#7f9ca9' }}>
               {post.content}
@@ -120,7 +119,15 @@ const PostDetail = () => {
 
             {user && !toggleForm ?
                 (<div className="mb-2">
-                  <Button variant="outline-primary" type="submit" onClick={() => toggleCommentForm()} style={{ backgroundColor: '#e6c8fe', borderColor: '#e6c8fe', color: 'white' }}>
+                  <Button variant="outline-primary" type="submit" onClick={() => toggleCommentForm()}
+                          style={{
+                            backgroundColor: '#f17891',
+                            borderColor: '#f17891',
+                            color: 'white',
+                            width:'30%',
+                            marginBottom:'16px'
+
+                          }}>
                     Add New Comment
                   </Button>
 
@@ -133,7 +140,12 @@ const PostDetail = () => {
               </Card.Body>
             </div>
 
-            <Card className='mb-2' style={{ backgroundColor: '#e6c8fe' }}>
+            {/*this is the background color of the comment list*/}
+
+            <Card className='mb-2' style={{
+              backgroundColor: '#88d8c0',
+              borderColor:'#88d8c0'
+            }}>
               <Card.Body>
                 {comments && comments.length > 0 ? <CommentList comments={comments} refreshCommentData={refreshCommentData} /> : null}
               </Card.Body>
@@ -141,11 +153,11 @@ const PostDetail = () => {
           </Col>
         </Row>
 
-        <Button variant="outline-primary" type="submit" onClick={() => navigate('/')} style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf', color: 'white', width: '15%', marginRight: '8px' }}>
+        <Button variant="outline-primary" type="submit" onClick={() => navigate('/')} style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf', color: 'white', width: '20%', marginRight: '8px' }}>
           Back to Home
         </Button>{"  "}
         {user ?
-            <Button variant="outline-primary" type="submit" onClick={addMyFavoritePost} style={{ backgroundColor: '#e6c8fe', borderColor: '#e6c8fe', color: 'white', width: '15%', marginTop: '8px' }}>
+            <Button variant="outline-primary" type="submit" onClick={addMyFavoritePost} style={{ backgroundColor: '#e6c8fe', borderColor: '#e6c8fe', color: 'white', width: '20%', marginTop: '8px' }}>
               Add to Favorites
             </Button>
             : ''

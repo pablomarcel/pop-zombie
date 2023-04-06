@@ -79,12 +79,20 @@ function Register() {
   }
 
   return (
-      <Container style={{ width: "400px" }}>
-        <section className='heading' style={{ backgroundColor: "#fcf7e3" }}>
+      <Container style={{
+        width: "400px",
+        padding:'30px'
+
+      }}>
+        <section className='heading' style={{
+          backgroundColor: "#fcf7e3"
+
+
+        }}>
           <h3 style={{ color: "#fbb9c5" }}>
             <FaUser /> Register
           </h3>
-          <h4 style={{ color: "#b8dfe6" }}>Please create an account</h4>
+          <h4 style={{ color: "#b8dfe6" }}>Create an account here</h4>
         </section>
 
         <section className='form' style={{ backgroundColor: "#fcf7e3" }}>
