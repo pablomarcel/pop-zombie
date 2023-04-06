@@ -107,7 +107,7 @@ const PostDetail = () => {
             <Card.Text style={{
               color: '#e6c8fe'
             }}>
-              <strong>Category:</strong><strong><span style={{color: '#f17891'}}>{post.city}</span></strong> - <strong><span style={{color: '#88d8c0'}}>{post.country}</span></strong>
+              <strong>Category: </strong>{" "}<strong><span style={{color: '#f17891'}}>{post.city}</span></strong> - <strong><span style={{color: '#88d8c0'}}>{post.country}</span></strong>
             </Card.Text>
 
 
