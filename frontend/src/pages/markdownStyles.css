@@ -11,3 +11,16 @@
 .markdown-container h6 {
     color: #7f9ca9;
 }
+
+/* Add the following CSS rules to style the hyperlinks */
+.markdown-container a,
+.markdown-container a:visited {
+    color: #f17891; /* Change this value to your desired color */
+    text-decoration: none;
+}
+
+.markdown-container a:hover,
+.markdown-container a:active {
+    color: blue; /* Change this value to your desired color for hover and active states */
+    text-decoration: underline;
+}
