@@ -17,6 +17,7 @@ server.use(express.urlencoded({ extended: true }));
 server.use(errorHandler);
 server.use(routes);
 server.use('/images', express.static('images'));
+server.use(require('prerender-node').set('prerenderToken', '2qbEvs4NQssPPnzotNB5'));
 
 
 // Serve frontend
@@ -34,4 +35,3 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = server;
 
- 
