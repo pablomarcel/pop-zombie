@@ -40,12 +40,12 @@ const Post = ({ post, showUsername, fromFavoritePostPage }) => {
 
         <Card.Body>
           <Link to={`/postDetail/${postId}`}>
-            <Card.Title style={{ color: '#fbb9c5' }}>{title}</Card.Title>
+            <Card.Title style={{ color: '#f17891' }}>{title}</Card.Title>
           </Link>
           <Card.Text>
             {authorImage}
-            <span style={{ color: '#b8dfe6' }}>{author}</span>
-            <span style={{ color: '#c3edbf' }}>{postDate}</span>
+            <span style={{ color: '#b99ef5' }}>{author}</span>
+            <span style={{ color: '#88d8c0' }}>{postDate}</span>
           </Card.Text>
         </Card.Body>
       </Card>

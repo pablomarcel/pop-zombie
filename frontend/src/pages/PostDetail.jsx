@@ -10,6 +10,7 @@ import CommentForm from "../components/CommentForm";
 import default_image from '../logo/default_user.jpg';
 import ReactMarkdown from "react-markdown";
 import './markdownStyles.css'
+import { Helmet } from 'react-helmet'; // Import Helmet
 
 const PostDetail = () => {
   const { id } = useParams();
@@ -62,7 +63,7 @@ const PostDetail = () => {
       await axios
         .post('/api/favoriteposts/', data, config)
         .then(res => {
-          toast.success('The task has been done. Please visit your favorire posts page.');
+          toast.success('The task has been done. Please visit your favorite posts page.');
           return res.data
         })
         .catch(err =>
@@ -79,6 +80,13 @@ const PostDetail = () => {
 
   return (
       <Container fluid>
+
+        <Helmet>
+          <title>{post.title ? `${post.title} - Pop Zombie` : 'Post Detail - Pop Zombie'}</title>
+          <meta name="description" content={post.title ? `Post detail page for ${post.title} by ${post.author.firstName} ${post.author.lastName}.` : "Post detail page of the application."} />
+        </Helmet>
+
+
         <div className='title bottom__line' style={{
           backgroundColor: '#fcf7e3',
           color: "#88d8c0",
@@ -95,7 +103,7 @@ const PostDetail = () => {
             <Card className='mb-2' style={{ backgroundColor: '#fcf7e3' }}>
               {post.image ? <Card.Img src={post.image} alt={post.title} /> : ''}
               <Card.Body>
-                <Card.Text style={{ color: '#b8dfe6' }}>
+                <Card.Text style={{ color: '#b99ef5' }}>
                   <img src={authorImage} alt='' className='author-small-image' />
                   {post.author ? ` ${post.author.firstName} ${post.author.lastName}` : ''}
                   {post.updatedAt ? ` - Last modified: ${formatDistance(new Date(post.updatedAt), new Date())}` : ''}
@@ -105,7 +113,7 @@ const PostDetail = () => {
           </Col>
           <Col>
             <Card.Text style={{
-              color: '#e6c8fe'
+              color: '#b99ef5'
             }}>
               <strong>Category: </strong>{" "}<strong><span style={{color: '#f17891'}}>{post.city}</span></strong> - <strong><span style={{color: '#88d8c0'}}>{post.country}</span></strong>
             </Card.Text>

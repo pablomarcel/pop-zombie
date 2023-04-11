@@ -6,6 +6,7 @@ import { FaUser } from 'react-icons/fa'
 import { register, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
 import { Container } from 'react-bootstrap'
+import { Helmet } from 'react-helmet';
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -84,9 +85,12 @@ function Register() {
         padding:'30px'
 
       }}>
+        <Helmet>
+          <title>Register - Pop Zombie</title>
+          <meta name="description" content="Create an account for the application to access features and manage your posts." />
+        </Helmet>
         <section className='heading' style={{
           backgroundColor: "#fcf7e3"
-
 
         }}>
           <h3 style={{ color: "#fbb9c5" }}>

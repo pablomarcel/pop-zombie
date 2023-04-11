@@ -7,6 +7,8 @@ import { getAllMyFavoritePosts, reset, deleteMyFavoritePost } from "../features/
 import { getAllPosts } from '../features/posts/postSlice'
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from 'react-helmet';
+
 const FavoritePost = () => {
   const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -44,6 +46,14 @@ const FavoritePost = () => {
 
   return (
       <Container fluid>
+
+        <Helmet>
+          <title>{user ? `${user.firstName}'s Favorite Posts - Pop Zombie` : "My Favorite Posts - Pop Zombie"}</title>
+          <meta name="description" content={favoriteposts.length > 0 ? `A list of ${user.firstName}'s ${favoriteposts.length} favorite posts in the application.` : "A list of the user's favorite posts in the application."} />
+        </Helmet>
+
+
+
         {/* Rendering button showing/hiding slide show */}
         <div className="right__side mt-2">
           <Button
