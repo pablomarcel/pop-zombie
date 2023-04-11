@@ -4,6 +4,7 @@ import { Button, Container } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
+import { Helmet } from 'react-helmet';
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -26,6 +27,12 @@ const Profile = () => {
 
   return (
       <Container style={{ width: "400px" }}>
+        <Helmet>
+          <title>{user ? `${user.firstName}'s Profile - Pop Zombie` : "User Profile - Pop Zombie"}</title>
+          <meta name="description" content={user ? `${user.firstName}'s profile information in the application.` : "User's profile information in the application."} />
+        </Helmet>
+
+
         <div className="p-3 box" style={{backgroundColor: "#fcf7e3"}}>
           <h3 className="mb-3 text-center" style={{color: "#fbb9c5"}}>My Profile</h3>
           <div className="pb-2" style={{color: "#b8dfe6"}}>

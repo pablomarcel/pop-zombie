@@ -6,6 +6,7 @@ import { toast } from 'react-toastify'
 import { login, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
 import { Container } from 'react-bootstrap'
+import { Helmet } from 'react-helmet';
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -64,6 +65,13 @@ function Login() {
 
   return (
       <Container style={{ width: "400px", backgroundColor: "#fcf7e3", padding: "30px", borderRadius: "10px" }}>
+
+        <Helmet>
+          <title>Login - Pop Zombie</title>
+          <meta name="description" content="Login to the application to access your account and manage your posts." />
+        </Helmet>
+
+
         <section className='heading'>
           <h3 style={{
             color: "#fbb9c5",

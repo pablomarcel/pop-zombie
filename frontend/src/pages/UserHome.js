@@ -7,6 +7,7 @@ import ImageSlideShow from "../components/ImageSlideShow";
 import { getPostsByUser, reset, deletePost } from '../features/posts/postSlice';
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Helmet } from 'react-helmet';
 
 const UserHome = () => {
   const navigate = useNavigate()
@@ -68,6 +69,10 @@ const UserHome = () => {
 
   return (
       <Container fluid>
+        <Helmet>
+          <title>{user ? `${user.firstName}'s Posts - Pop Zombie` : "User's Posts - Pop Zombie"}</title>
+          <meta name="description" content={user ? `A list of ${user.firstName}'s posts in the application.` : "A list of the user's posts in the application."} />
+        </Helmet>
         {/* Rendering button showing/hiding slide show */}
         <div className={toggleDisplay ? "hide" : "right__side mt-2"}>
           {/* Add New Post Button */}
