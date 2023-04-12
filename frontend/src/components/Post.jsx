@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import formatDistance from 'date-fns/formatDistance';
 import default_image from '../logo/default_user.jpg';
+import './postStyles.css';
+
 const Post = ({ post, showUsername, fromFavoritePostPage }) => {
   if (!post) {return}
   // Get author image & name
