@@ -3,11 +3,6 @@
     <url><loc>https://www.pop-zombie.com/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
     <url><loc>https://www.pop-zombie.com/login</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
     <url><loc>https://www.pop-zombie.com/register</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/userHome</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/favoritePost</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/profile</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/userForm</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
     <url><loc>https://www.pop-zombie.com/postDetail/6427835f33acaf9040eacf22</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
     <url><loc>https://www.pop-zombie.com/postDetail/64278ce5cf82b31f96c8922f</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
     <url><loc>https://www.pop-zombie.com/postDetail/64283844b1334539a01a691d</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -15,23 +10,59 @@
     <url><loc>https://www.pop-zombie.com/postDetail/642bc2f8402f3abc9a84999c</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
     <url><loc>https://www.pop-zombie.com/postDetail/642cbed6402f3abc9a849a37</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
     <url><loc>https://www.pop-zombie.com/postDetail/642cc6ac402f3abc9a849a43</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/642ccc5e402f3abc9a849a4e</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/642dd070402f3abc9a849ab0</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/642e06db402f3abc9a849ac4</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/642ed6a0402f3abc9a849ad1</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/642f2529402f3abc9a849ae1</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/642f30e5402f3abc9a849aea</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/642f6aa3402f3abc9a849b00</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/642fd030402f3abc9a849b12</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/6430dbec402f3abc9a849b1b</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/64318d0e402f3abc9a849b29</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/64319aa5402f3abc9a849b36</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/6431d1d3402f3abc9a849b43</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/6432f8b7402f3abc9a849b52</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/6433d7c8402f3abc9a849b5b</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/6434a5fd402f3abc9a849b6d</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/6435531a402f3abc9a849b77</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/64360097402f3abc9a849b7d</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/6436e6c6402f3abc9a849b89</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.pop-zombie.com/postDetail/6437ccf1402f3abc9a849b9a</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cc6d4402f3abc9a849a46</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cc70a402f3abc9a849a49</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cc732402f3abc9a849a4c</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cc783402f3abc9a849a4f</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cc7ab402f3abc9a849a52</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cc7d9402f3abc9a849a55</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cc803402f3abc9a849a58</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cc82a402f3abc9a849a5b</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cc852402f3abc9a849a5e</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cc879402f3abc9a849a61</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cc926402f3abc9a849a64</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cc99f402f3abc9a849a67</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cc9d8402f3abc9a849a6a</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cca08402f3abc9a849a6d</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cca32402f3abc9a849a70</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cca74402f3abc9a849a73</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccab9402f3abc9a849a76</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccb08402f3abc9a849a79</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccb2f402f3abc9a849a7c</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccb87402f3abc9a849a82</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccbe4402f3abc9a849a85</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccc0f402f3abc9a849a88</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccc4d402f3abc9a849a8b</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccc90402f3abc9a849a8e</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cccba402f3abc9a849a91</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccd09402f3abc9a849a94</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccd31402f3abc9a849a97</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccd5e402f3abc9a849a9a</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccd94402f3abc9a849a9d</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccdd1402f3abc9a849aa0</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccdfc402f3abc9a849aa3</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cce28402f3abc9a849aa6</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cce73402f3abc9a849aa9</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cceb8402f3abc9a849aac</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccee8402f3abc9a849aaf</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccf16402f3abc9a849ab2</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccf53402f3abc9a849ab5</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccf8d402f3abc9a849ab8</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccfcb402f3abc9a849abb</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642ccff3402f3abc9a849abe</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cd01d402f3abc9a849ac1</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cd048402f3abc9a849ac4</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cd073402f3abc9a849ac7</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cd09a402f3abc9a849aca</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cd0d7402f3abc9a849acd</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cd101402f3abc9a849ad0</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cd12d402f3abc9a849ad3</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cd152402f3abc9a849ad6</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cd179402f3abc9a849ad9</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/642cd1b5402f3abc9a849adc</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/6430f57e112e651bcecaaf50</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/643100553f0162e50f3be79c</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/643102c63f0162e50f3be7b6</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/643184e53f0162e50f3be7ef</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.pop-zombie.com/postDetail/6431874d3f0162e50f3be7fe</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 </urlset>

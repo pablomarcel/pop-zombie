@@ -1,0 +1,10 @@
+.home-container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Responsive image style */
+.home-container img {
+    max-width: 100%;
+    height: auto;
+}

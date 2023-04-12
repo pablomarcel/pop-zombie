@@ -12,6 +12,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import formatDistance from 'date-fns/formatDistance';
 import { Helmet } from 'react-helmet';
+import './homeStyles.css';
+
 
 // import { FaSearch } from 'react-icons/fa';
 
