@@ -35,7 +35,9 @@ const Post = ({ post, showUsername, fromFavoritePostPage }) => {
   const postDate = post.updatedAt ? ` Last modified: ${formatDistance(new Date(post.updatedAt), new Date())}` : '';
 
   return (
-      <Card className='mb-2' style={{ backgroundColor: '#fcf7e3' }}>
+
+
+      <Card className='custom-card mb-2' style={{ backgroundColor: '#fcf7e3' }}>
         <Link to={`/postDetail/${postId}`}>
           {image ? <Card.Img src={image} alt={title} className="w-100" style={{ borderRadius: '10px' }} /> : ''}
         </Link>
