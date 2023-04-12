@@ -78,7 +78,7 @@ const Home = () => {
   };
 
   return (
-      <>
+
         <Container fluid>
 
           <Helmet>
@@ -228,7 +228,7 @@ const Home = () => {
 
         </Container>
 
-      </>
+
   );
 
 }
