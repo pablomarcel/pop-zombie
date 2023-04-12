@@ -111,7 +111,7 @@ const Home = () => {
 
           <Row>
             {/* Dividing the screen into 3 columns */}
-            <Col xs={12} md={4}>
+            <Col xs={10} md={4}>
               <Row className="mt-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Col>
                   <h3 style={{
@@ -142,7 +142,7 @@ const Home = () => {
               </Row>
             </Col>
 
-            <Col xs={12} md={4} className="d-flex justify-content-center align-items-center">
+            <Col xs={10} md={4} className="d-flex justify-content-center align-items-center">
 
               {/* Post-List area */}
               <Col>
