@@ -3,10 +3,19 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import formatDistance from 'date-fns/formatDistance';
 import default_image from '../logo/default_user.jpg';
+import React from "react";
+import ReactPlayer from "react-player";
+
 import './postStyles.css';
 
 const Post = ({ post, showUsername, fromFavoritePostPage }) => {
   if (!post) {return}
+
+  const isVideo = (url) => {
+    const videoExtensions = ['.mp4', '.webm', '.ogg'];
+    return videoExtensions.some((ext) => url.endsWith(ext));
+  };
+
   // Get author image & name
   let authorImage = '';
   let author = '';
@@ -39,7 +48,22 @@ const Post = ({ post, showUsername, fromFavoritePostPage }) => {
 
       <Card className='custom-card mb-2' style={{ backgroundColor: '#fcf7e3' }}>
         <Link to={`/postDetail/${postId}`}>
-          {image ? <Card.Img src={image} alt={title} className="w-100" style={{ borderRadius: '10px' }} /> : ''}
+          {image ? (
+              isVideo(image) ? (
+                  <div className="banner">
+                    <ReactPlayer className="w-90" url={post.image} controls />
+                  </div>
+              ) : (
+                  <Card.Img
+                      src={image}
+                      alt={title}
+                      className="w-90"
+                      style={{ borderRadius: '10px' }}
+                  />
+              )
+          ) : (
+              ''
+          )}
         </Link>
 
         <Card.Body>

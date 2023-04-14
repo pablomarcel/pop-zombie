@@ -7,6 +7,8 @@ import { getAllMyFavoritePosts, reset, deleteMyFavoritePost } from "../features/
 import { getAllPosts } from '../features/posts/postSlice'
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import React from 'react';
+import ReactPlayer from 'react-player'
 import { Helmet } from 'react-helmet';
 
 const FavoritePost = () => {
