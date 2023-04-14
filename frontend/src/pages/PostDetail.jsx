@@ -8,6 +8,8 @@ import formatDistance from 'date-fns/formatDistance';
 import CommentList from "../components/CommentList";
 import CommentForm from "../components/CommentForm";
 import default_image from '../logo/default_user.jpg';
+import React, { useCallback } from 'react';
+import ReactPlayer from 'react-player'
 import ReactMarkdown from "react-markdown";
 import './markdownStyles.css'
 import { Helmet } from 'react-helmet'; // Import Helmet
@@ -36,6 +38,12 @@ const PostDetail = () => {
       })
       .catch(err => toast.error(err));
   }, [id]);
+
+  const isVideo = useCallback((url) => {
+    const videoExtensions = ['.mp4', '.webm', '.ogg'];
+    return videoExtensions.some((ext) => url && url.endsWith(ext));
+  }, []);
+
 
   const toggleCommentForm = () => {
     setToggleForm(!toggleForm);
@@ -101,7 +109,20 @@ const PostDetail = () => {
         <Row>
           <Col>
             <Card className='mb-2' style={{ backgroundColor: '#fcf7e3' }}>
-              {post.image ? <Card.Img src={post.image} alt={post.title} /> : ''}
+              {
+                post.image ? (
+                    isVideo(post.image) ? (
+                        <div className="banner">
+                          <ReactPlayer className="w-100" url={post.image} controls />
+                        </div>
+                    ) : (
+                        <Card.Img src={post.image} alt={post.title} />
+                    )
+                ) : (
+                    ''
+                )
+              }
+
               <Card.Body>
                 <Card.Text style={{ color: '#b99ef5' }}>
                   <img src={authorImage} alt='' className='author-small-image' />
