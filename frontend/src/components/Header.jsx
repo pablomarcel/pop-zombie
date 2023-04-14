@@ -22,7 +22,9 @@ function Header() {
             <ul>
                 {user ? (
                     <li>
-                        <button className='btn' onClick={onLogout} style={{backgroundColor:'#b8dfe6'}}>
+                        <button className='btn' onClick={onLogout} style={{
+                            backgroundColor:'#b8dfe6'
+                        }}>
                             <FaSignOutAlt /> <span style={{color:'#fcf7e3'}}>Logout</span>
                         </button>
                     </li>

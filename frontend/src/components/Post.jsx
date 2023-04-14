@@ -51,13 +51,13 @@ const Post = ({ post, showUsername, fromFavoritePostPage }) => {
           {image ? (
               isVideo(image) ? (
                   <div className="banner">
-                    <ReactPlayer className="w-90" url={post.image} controls />
+                    <ReactPlayer className="w-100" url={post.image} controls />
                   </div>
               ) : (
                   <Card.Img
                       src={image}
                       alt={title}
-                      className="w-90"
+                      className="w-100"
                       style={{ borderRadius: '10px' }}
                   />
               )
