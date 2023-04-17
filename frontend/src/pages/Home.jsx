@@ -116,7 +116,8 @@ const Home = () => {
 
               <Row>
                 {/* Dividing the screen into 3 columns */}
-                <Col xs={12} md={4}>
+                {/* Categories Column */}
+                <Col md={4}>
                   <Row className="mt-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Col>
                       <h3 style={{
@@ -147,7 +148,8 @@ const Home = () => {
                   </Row>
                 </Col>
 
-                <Col xs={12} md={4} className="d-flex justify-content-center align-items-center">
+                {/* Posts content column */}
+                <Col md={4}>
 
                   {/* Post-List area */}
                   <Col>
@@ -203,7 +205,6 @@ const Home = () => {
                       }
                     </Row>
 
-
                     {/* Rendering the pagination buttons */}
                     <Row className='pt-2'>
                       <ReactPaginate
@@ -220,7 +221,15 @@ const Home = () => {
                     </Row>
 
                   </Col>
+
                 </Col>
+
+                {/* Placeholder content column */}
+                <Col md={4}>
+
+                </Col>
+
+
               </Row>
             </Container>
 
