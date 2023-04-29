@@ -1,3 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: https://www.pop-zombie.com/register',%20eleme
+Disallow: https://www.pop-zombie.com/login'
+Disallow: https://www.pop-zombie.com/'
