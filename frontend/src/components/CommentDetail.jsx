@@ -5,7 +5,7 @@ const COLORS = {
     pink: "#fbb9c5",
     purple: "#e6c8fe",
     yellow: "#fcf7e3",
-    green: "#c3edbf",
+    green: "#88d8c0",
     blue: "#b8dfe6",
 };
 
@@ -22,7 +22,7 @@ const CommentDetail = ({ comment }) => {
                     {author}
                 </div>
             </div>
-            <div className="px-2" style={{ color: COLORS.blue }}>
+            <div className="px-2" style={{ color: '#3a5a78' }}>
                 {comment.comment}
             </div>
             <div className="sub-text">
