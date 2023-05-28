@@ -46,7 +46,13 @@ const Post = ({ post, showUsername, fromFavoritePostPage }) => {
   return (
 
 
-      <Card className='custom-card mb-2' style={{ backgroundColor: '#fcf7e3' }}>
+      <Card className='custom-card mb-2'
+            style={{
+              backgroundColor: '#fcf7e3',
+              boxShadow: '0px 5px 15px rgba(0, 0, 0, 0.2)',
+              borderRadius: '15px',
+
+      }}>
         <Link to={`/postDetail/${postId}`}>
           {image ? (
               isVideo(image) ? (
@@ -58,7 +64,10 @@ const Post = ({ post, showUsername, fromFavoritePostPage }) => {
                       src={image}
                       alt={title}
                       className="w-100"
-                      style={{ borderRadius: '10px' }}
+                      style={{
+                        borderRadius: '10px',
+                        marginTop:'12px'
+                  }}
                   />
               )
           ) : (

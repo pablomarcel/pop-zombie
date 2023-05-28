@@ -39,13 +39,17 @@ const CommentForm = ({ postId, user, toggleCommentForm, refreshCommentData }) =>
 
   return (
       <Container>
-        <div className="pb-2 box" style={{ backgroundColor: '#fcf7e3' }}>
+        <div className="pb-2 box"
+             style={{
+               backgroundColor: '#fcf7e3',
+
+        }}>
           <div className='sub-header'>
             <div onClick={()=>toggleCommentForm()} className='form-icon' style={{ backgroundColor: '#fbb9c5' }}>
               <FiX />
             </div>
           </div>
-          <h3 className="mb-2 title" style={{ color: '#b8dfe6' }}>New Comment</h3>
+          <h3 className="mb-2 title" style={{ color: '#b99ef5' }}>New Comment</h3>
 
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3">
@@ -58,14 +62,18 @@ const CommentForm = ({ postId, user, toggleCommentForm, refreshCommentData }) =>
                   rows={3}
                   onChange={(e) => setComment(e.target.value)}
                   required
-                  style={{ backgroundColor: '#e6c8fe' }}
+                  style={{ backgroundColor: '#fcf7e3' }}
               />
             </Form.Group>
             <Form.Group className="mb-3">
               <Rating onClick={handleRating} ratingValue={rating} />
             </Form.Group>
             <div className="d-grid gap-2">
-              <Button variant="primary" type="Submit" style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf' }}>
+              <Button variant="primary" type="Submit"
+                      style={{
+                        backgroundColor: '#88d8c0',
+                        borderColor: '#88d8c0'
+              }}>
                 Add comment
               </Button>
             </div>

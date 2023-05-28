@@ -108,7 +108,14 @@ const PostDetail = () => {
         </div>
         <Row>
           <Col>
-            <Card className='mb-2' style={{ backgroundColor: '#fcf7e3' }}>
+            <Card className='mb-2'
+                  style=
+                      {{
+                        backgroundColor: '#fcf7e3',
+                        boxShadow: '0px 5px 15px rgba(0, 0, 0, 0.2)',
+                        borderRadius: '15px',
+                        padding:'15px'
+            }}>
               {
                 post.image ? (
                     isVideo(post.image) ? (
@@ -116,7 +123,14 @@ const PostDetail = () => {
                           <ReactPlayer className="w-100" url={post.image} controls />
                         </div>
                     ) : (
-                        <Card.Img src={post.image} alt={post.title} />
+                        <Card.Img
+                            src={post.image}
+                            alt={post.title}
+                            style={{
+                              borderRadius: '10px',
+
+                            }}
+                        />
                     )
                 ) : (
                     ''
@@ -186,8 +200,11 @@ const PostDetail = () => {
             {/*this is the background color of the comment list*/}
 
             <Card className='mb-2' style={{
-              backgroundColor: '#88d8c0',
-              borderColor:'#88d8c0'
+              backgroundColor: '#fcf7e3',
+              boxShadow: '0px 5px 15px rgba(0, 0, 0, 0.2)',
+              borderRadius: '15px',
+
+
             }}>
               <Card.Body>
                 {comments && comments.length > 0 ? <CommentList comments={comments} refreshCommentData={refreshCommentData} /> : null}
@@ -196,7 +213,7 @@ const PostDetail = () => {
           </Col>
         </Row>
 
-        <Button variant="outline-primary" type="submit" onClick={() => navigate('/')} style={{ backgroundColor: '#c3edbf', borderColor: '#c3edbf', color: 'white', width: '20%', marginRight: '8px' }}>
+        <Button variant="outline-primary" type="submit" onClick={() => navigate('/')} style={{ backgroundColor: '#88d8c0', borderColor: '#88d8c0', color: 'white', width: '20%', marginRight: '8px' }}>
           Back to Home
         </Button>{"  "}
         {user ?
